@@ -1,0 +1,69 @@
+import { motion } from "framer-motion";
+
+export function About() {
+  const timeline = [
+    { year: "2000", title: "Fundación Metromazda", desc: "Iniciamos operaciones en el centro de Medellín, especializados exclusivamente en partes originales Mazda." },
+    { year: "2010", title: "Expansión de Marcas", desc: "Ampliamos nuestro catálogo a 6 marcas principales para cubrir las necesidades de los talleres locales." },
+    { year: "2018", title: "Rebranding a MH Autopartes", desc: "Nueva identidad visual y estructura organizativa para soportar nuestro crecimiento en la ciudad." },
+    { year: "2024", title: "Transformación Digital", desc: "Lanzamiento de nuevas plataformas de atención para agilizar pedidos y consultas vía WhatsApp." }
+  ];
+
+  return (
+    <section id="nosotros" className="py-24 bg-background border-t border-border">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Nuestra Historia</h2>
+            <div className="w-20 h-2 bg-primary mb-8 rounded-full"></div>
+            
+            <div className="prose prose-invert text-muted-foreground prose-lg font-light leading-relaxed">
+              <p>
+                MH Autopartes nació hace más de dos décadas con un objetivo claro: ofrecer repuestos de alta calidad con la precisión técnica que los mecánicos exigen.
+              </p>
+              <p>
+                Sabemos que en el taller no hay margen para el error. Una pieza equivocada significa tiempo perdido y clientes insatisfechos. Por eso, hemos construido un equipo de asesores que conocen los manuales de despiece como la palma de su mano.
+              </p>
+              <p>
+                Hoy, como MH Autopartes, mantenemos intacto nuestro compromiso fundacional: ser el aliado estratégico en el que confían los profesionales del sector automotriz en Medellín.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-[15px] md:left-8 top-2 bottom-2 w-0.5 bg-border"></div>
+
+            <div className="space-y-8">
+              {timeline.map((item, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="relative pl-12 md:pl-20"
+                >
+                  <div className="absolute left-0 md:left-[21px] top-1 w-8 h-8 rounded-full bg-card border-4 border-background flex items-center justify-center">
+                    <div className="w-2.5 h-2.5 rounded-full bg-primary"></div>
+                  </div>
+                  
+                  <div className="bg-card border border-border p-6 rounded-xl hover:border-primary/30 transition-colors">
+                    <span className="text-primary font-black text-xl block mb-1">{item.year}</span>
+                    <h4 className="text-white font-bold text-lg mb-2">{item.title}</h4>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "MH Autopartes"
+version = "1.0.0"
+id = "artifacts/mh-autopartes"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22540
+
+[services.development]
+run = "pnpm --filter @workspace/mh-autopartes run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mh-autopartes", "run", "build" ]
+publicDir = "artifacts/mh-autopartes/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22540"
+BASE_PATH = "/"

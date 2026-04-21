@@ -1,0 +1,25 @@
+Proyecto: Modernización total del sitio web "MH Autopartes" (referencia actual: mhautopartes.com).
+Objetivo: Transformar una web antigua de repuestos en una plataforma moderna, rápida y orientada a la conversión (Venta vía WhatsApp).
+Identidad de Marca:
+Marcas especializadas: Chevrolet, Mazda, Renault, Kia, Hyundai y Ford.
+Conceptos clave: Confianza, precisión técnica, repuestos originales y homologados.
+Estética: Diseño industrial moderno, limpio, con tipografías Sans-Serif robustas (ej. Inter o Roboto). Usar una paleta de colores profesional (Gris oscuro, Azul acero y acentos en Naranja o Rojo).
+Estructura de la Aplicación (Páginas):
+Home: > - Hero section con buscador central: "¿Qué repuesto buscas para tu carro?".
+Selector visual de marcas (iconos de Chevrolet, Mazda, etc.).
+Sección de "Por qué elegirnos" (21+ años de experiencia, garantía de fábrica).
+Catálogo de Repuestos: > - Layout de tarjetas (cards) que incluyan: Foto del producto, Nombre, Marca del Vehículo, y etiqueta de "Original" o "Homologado".
+Filtros laterales por Marca, Categoría (Frenos, Suspensión, Motor, Lubricantes) y Tipo de repuesto.
+Tiendas (Sedes): Sección interactiva para las sedes "Palace" y "Chagualo" con horarios integrados y botones de Google Maps.
+Nosotros: Resumen de la evolución desde el año 2000 (Metromazda a MH Autopartes).
+Funcionalidades Técnicas Requeridas:
+Botón de WhatsApp Dinámico: Cada tarjeta de producto debe tener un botón "Consultar disponibilidad" que envíe un mensaje automático: "Hola MH Autopartes, deseo consultar disponibilidad del repuesto: [Nombre del Producto] para el vehículo [Marca]".
+Diseño Mobile-First: El 80% de los clientes buscarán desde su celular en el taller; la web debe ser ultra-ligera en móviles.
+Simulación de Inventario: Crea una estructura de datos (JSON) para al menos 12 productos de ejemplo que cubran las 6 marcas mencionadas.
+Stack Sugerido: React, Tailwind CSS y Lucide Icons.
+Instrucción de inicio: Comienza diseñando el Header con el logo y la sección Hero de búsqueda, y luego crea el sistema de filtrado de marcas.
+Recomendaciones de Modernización (Look & Feel)
+Navegación por Marcas: En lugar de menús desplegables, usa logos minimalistas (Chevrolet, Mazda, etc.) en la página de inicio para que el usuario haga clic directamente en su marca.
+Diferenciación Original vs. Homologado: Utiliza etiquetas (badges) de colores claros para distinguir visualmente si el repuesto es genuino o una alternativa de calidad.
+Buscador Inteligente: El elemento central debe ser una barra de búsqueda que permita filtrar por "Nombre del repuesto" o "Modelo del vehículo".
+Estética Industrial-Limpia: Usa una paleta de grises oscuros (llantas/asfalto), azules mecánicos o rojos de acento (frenos/potencia), combinados con mucho espacio en blanco para que no parezca un taller desordenado.
