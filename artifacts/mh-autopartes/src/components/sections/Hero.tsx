@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import { motion } from "framer-motion";
+import { SiChevrolet, SiMazda, SiRenault, SiKia, SiHyundai, SiFord } from "react-icons/si";
 
 interface HeroProps {
   searchQuery: string;
@@ -13,59 +14,118 @@ export function Hero({ searchQuery, setSearchQuery }: HeroProps) {
     if (catalog) catalog.scrollIntoView({ behavior: "smooth" });
   };
 
+  const brandIcons = [
+    { name: "Mazda", icon: SiMazda, color: "#cc0000" },
+    { name: "Chevrolet", icon: SiChevrolet, color: "#CC0000" },
+    { name: "Renault", icon: SiRenault, color: "#FFCC00" },
+    { name: "Kia", icon: SiKia, color: "#BB162B" },
+    { name: "Hyundai", icon: SiHyundai, color: "#002C5F" },
+    { name: "Ford", icon: SiFord, color: "#003478" },
+  ];
+
+  // Pixel stripe colors
+  const pixelColors = ["#F5C518","#F5C518","#E91E8C","#E91E8C","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
+
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-20 overflow-hidden bg-background">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/40 via-background to-background"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px]"></div>
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDQwaDQwVjBIMHoiLz48L2c+PC9zdmc+')] opacity-50"></div>
-      </div>
-
-      <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border mb-8">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">21+ años de experiencia en Medellín, Colombia</span>
-          </div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0B1526] via-[#0F2052] to-[#215BE1]">
+      {/* Diagonal decorative shape */}
+      <div className="absolute right-0 top-0 w-1/2 h-full bg-[#215BE1]/20 skew-x-[-12deg] translate-x-1/4 pointer-events-none" />
+      
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           
-          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 leading-[1.1]">
-            El repuesto que necesitas,<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">
-              en el momento exacto.
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto font-light">
-            Especialistas en autopartes originales y homologadas para las marcas más confiables del mercado. Encuentra lo que buscas y recíbelo rápido.
-          </p>
-
-          <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto w-full group">
-            <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl transition-all duration-500 group-hover:bg-primary/30 opacity-0 group-hover:opacity-100"></div>
-            <div className="relative flex items-center bg-card border-2 border-border focus-within:border-primary/50 rounded-full overflow-hidden shadow-2xl transition-all">
-              <div className="pl-6 text-muted-foreground">
-                <Search size={24} />
-              </div>
-              <input 
-                type="text" 
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="¿Qué repuesto buscas? Ej: Pastillas Mazda 3" 
-                className="w-full bg-transparent border-none py-5 px-4 text-lg text-white placeholder:text-muted-foreground focus:outline-none focus:ring-0"
+          {/* Left: MH Logo circle */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex-shrink-0"
+          >
+            <div className="w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#0B1526] border-4 border-white/20 flex items-center justify-center overflow-hidden shadow-2xl">
+              <img 
+                src="https://mhautopartes.com/wp-content/uploads/2018/06/logo-MH.png"
+                alt="MH Autopartes"
+                className="w-32 h-32 md:w-44 md:h-44 object-contain"
               />
-              <button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-5 px-8 transition-colors">
+            </div>
+          </motion.div>
+
+          {/* Right: Headline, pixel stripe, brand logos, search */}
+          <div className="flex-1 text-center md:text-left">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
+              <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-2">
+                MH <span className="text-white">Autopartes</span>
+              </h1>
+              
+              {/* Pixel stripe - brand identity */}
+              <div className="flex mb-6 mt-2">
+                {Array.from({ length: 32 }).map((_, i) => (
+                  <div 
+                    key={i} 
+                    className="h-4 flex-1"
+                    style={{ backgroundColor: pixelColors[i % pixelColors.length], minWidth: 8 }}
+                  />
+                ))}
+              </div>
+
+              <p className="text-white/80 text-lg mb-6 max-w-xl">
+                Especialistas en repuestos originales y homologados para las marcas más confiables. 21+ años de experiencia en Medellín.
+              </p>
+            </motion.div>
+            
+            {/* Search bar */}
+            <motion.form 
+              onSubmit={handleSearch} 
+              className="flex max-w-xl mb-8 shadow-xl"
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="relative flex-1">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                <input 
+                  type="text" 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="¿Qué repuesto buscas? Ej: Pastillas Mazda 3" 
+                  className="w-full bg-white border-none py-4 pl-12 pr-4 text-base text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#215BE1] rounded-none"
+                />
+              </div>
+              <button 
+                type="submit" 
+                className="bg-[#215BE1] hover:bg-[#1a4bc7] text-white font-bold py-4 px-8 transition-colors uppercase text-sm tracking-wide flex-shrink-0"
+              >
                 Buscar
               </button>
-            </div>
-          </form>
-        </motion.div>
+            </motion.form>
+
+            {/* Brand logos */}
+            <motion.div 
+              className="flex flex-wrap gap-6 items-center justify-center md:justify-start"
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              {brandIcons.map(({ name, icon: Icon, color }) => (
+                <div key={name} className="flex flex-col items-center gap-1 group cursor-pointer">
+                  <Icon size={40} color="white" className="opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                  <span className="text-[10px] text-white/70 font-semibold uppercase">{name}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom pixel stripe */}
+      <div className="flex w-full">
+        {Array.from({ length: 64 }).map((_, i) => (
+          <div 
+            key={i} 
+            className="h-3 flex-1"
+            style={{ backgroundColor: pixelColors[i % pixelColors.length], minWidth: 4 }}
+          />
+        ))}
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { products, brands, categories } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, Wrench, Settings, Zap, Filter, ChevronDown, X } from "lucide-react";
+import { MessageCircle, Wrench, Settings, Zap, Filter, ChevronDown } from "lucide-react";
 
 interface CatalogProps {
   searchQuery: string;
@@ -37,23 +37,23 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
 
   const generateWhatsAppLink = (productName: string, brand: string, model: string) => {
     const text = `Hola MH Autopartes, deseo consultar disponibilidad del repuesto: ${productName} para el vehículo ${brand} ${model}`;
-    return `https://wa.me/573001234567?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/573245934559?text=${encodeURIComponent(text)}`;
   };
 
   const getProductIcon = (index: number) => {
     const icons = [Wrench, Settings, Zap];
     const Icon = icons[index % icons.length];
-    return <Icon size={48} className="text-muted-foreground opacity-30" />;
+    return <Icon size={48} className="text-gray-300 opacity-50" />;
   };
 
   return (
-    <section id="catalogo" className="py-24 bg-background min-h-screen">
+    <section id="catalogo" className="py-24 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-8">
           
           {/* Mobile Filter Toggle */}
           <button 
-            className="md:hidden flex items-center justify-between w-full bg-card p-4 rounded-lg border border-border"
+            className="md:hidden flex items-center justify-between w-full bg-white p-4 rounded-lg border border-gray-200 text-gray-800"
             onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
           >
             <span className="flex items-center gap-2 font-bold"><Filter size={20} /> Filtros</span>
@@ -61,9 +61,9 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
           </button>
 
           {/* Sidebar Filters */}
-          <div className={`md:w-64 flex-shrink-0 flex flex-col gap-8 ${mobileFiltersOpen ? "block" : "hidden md:block"}`}>
+          <div className={`md:w-64 flex-shrink-0 flex flex-col gap-8 bg-white p-6 rounded-xl border border-gray-200 ${mobileFiltersOpen ? "block" : "hidden md:block"}`}>
             <div>
-              <h3 className="text-lg font-bold text-white mb-4 border-b border-border pb-2">Marca</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">Marca</h3>
               <div className="flex flex-col gap-2">
                 {brands.map(brand => (
                   <label key={brand} className="flex items-center gap-3 cursor-pointer group">
@@ -74,19 +74,19 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
                         onChange={() => setSelectedBrand(selectedBrand === brand ? null : brand)}
                         className="peer sr-only"
                       />
-                      <div className="w-5 h-5 border-2 border-muted-foreground rounded group-hover:border-primary peer-checked:bg-primary peer-checked:border-primary transition-colors"></div>
+                      <div className="w-5 h-5 border-2 border-gray-300 rounded group-hover:border-[#215BE1] peer-checked:bg-[#215BE1] peer-checked:border-[#215BE1] transition-colors"></div>
                       <div className="absolute opacity-0 peer-checked:opacity-100 text-white">
                         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"/></svg>
                       </div>
                     </div>
-                    <span className="text-muted-foreground group-hover:text-white transition-colors">{brand}</span>
+                    <span className="text-gray-600 group-hover:text-gray-900 transition-colors">{brand}</span>
                   </label>
                 ))}
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-white mb-4 border-b border-border pb-2">Categoría</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">Categoría</h3>
               <div className="flex flex-col gap-2">
                 {categories.map(cat => (
                   <label key={cat} className="flex items-center gap-3 cursor-pointer group">
@@ -97,19 +97,19 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
                         onChange={() => toggleCategory(cat)}
                         className="peer sr-only"
                       />
-                      <div className="w-5 h-5 border-2 border-muted-foreground rounded group-hover:border-primary peer-checked:bg-primary peer-checked:border-primary transition-colors"></div>
+                      <div className="w-5 h-5 border-2 border-gray-300 rounded group-hover:border-[#215BE1] peer-checked:bg-[#215BE1] peer-checked:border-[#215BE1] transition-colors"></div>
                       <div className="absolute opacity-0 peer-checked:opacity-100 text-white">
                         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"/></svg>
                       </div>
                     </div>
-                    <span className="text-muted-foreground group-hover:text-white transition-colors">{cat}</span>
+                    <span className="text-gray-600 group-hover:text-gray-900 transition-colors">{cat}</span>
                   </label>
                 ))}
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-white mb-4 border-b border-border pb-2">Tipo</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">Tipo</h3>
               <div className="flex flex-col gap-2">
                 {["Original", "Homologado"].map(type => (
                   <label key={type} className="flex items-center gap-3 cursor-pointer group">
@@ -120,12 +120,12 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
                         onChange={() => toggleType(type)}
                         className="peer sr-only"
                       />
-                      <div className="w-5 h-5 border-2 border-muted-foreground rounded group-hover:border-primary peer-checked:bg-primary peer-checked:border-primary transition-colors"></div>
+                      <div className="w-5 h-5 border-2 border-gray-300 rounded group-hover:border-[#215BE1] peer-checked:bg-[#215BE1] peer-checked:border-[#215BE1] transition-colors"></div>
                       <div className="absolute opacity-0 peer-checked:opacity-100 text-white">
                         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"/></svg>
                       </div>
                     </div>
-                    <span className="text-muted-foreground group-hover:text-white transition-colors">{type}</span>
+                    <span className="text-gray-600 group-hover:text-gray-900 transition-colors">{type}</span>
                   </label>
                 ))}
               </div>
@@ -135,15 +135,15 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
           {/* Product Grid */}
           <div className="flex-1">
             <div className="mb-6 flex justify-between items-end">
-              <h2 className="text-3xl font-black text-white">Catálogo de Repuestos</h2>
-              <span className="text-muted-foreground text-sm">{filteredProducts.length} resultados</span>
+              <h2 className="text-3xl font-black text-gray-900">Catálogo de Repuestos</h2>
+              <span className="text-gray-500 text-sm">{filteredProducts.length} resultados</span>
             </div>
 
             {filteredProducts.length === 0 ? (
-              <div className="bg-card border border-border rounded-xl p-12 text-center flex flex-col items-center">
-                <Settings size={48} className="text-muted-foreground mb-4 opacity-50" />
-                <h3 className="text-xl font-bold text-white mb-2">No se encontraron repuestos</h3>
-                <p className="text-muted-foreground">Intenta ajustar los filtros o el término de búsqueda.</p>
+              <div className="bg-white border border-gray-200 rounded-xl p-12 text-center flex flex-col items-center shadow-sm">
+                <Settings size={48} className="text-gray-400 mb-4 opacity-50" />
+                <h3 className="text-xl font-bold text-gray-800 mb-2">No se encontraron repuestos</h3>
+                <p className="text-gray-500">Intenta ajustar los filtros o el término de búsqueda.</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -156,14 +156,13 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
                       transition={{ duration: 0.2 }}
-                      className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] group flex flex-col"
+                      className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#215BE1]/50 transition-all hover:shadow-lg group flex flex-col"
                     >
-                      <div className="aspect-[4/3] bg-secondary flex items-center justify-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10"></div>
+                      <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center relative overflow-hidden">
                         {getProductIcon(product.id)}
                         <div className="absolute top-4 left-4 z-20">
-                          <span className={`px-2 py-1 text-xs font-bold uppercase rounded ${
-                            product.type === "Original" ? "bg-blue-900 text-blue-200" : "bg-orange-900 text-orange-200"
+                          <span className={`px-3 py-1 text-xs font-bold uppercase rounded-full ${
+                            product.type === "Original" ? "bg-blue-100 text-blue-700 border border-blue-200" : "bg-amber-100 text-amber-700 border border-amber-200"
                           }`}>
                             {product.type}
                           </span>
@@ -171,13 +170,13 @@ export function Catalog({ searchQuery, selectedBrand, setSelectedBrand }: Catalo
                       </div>
                       
                       <div className="p-5 flex-1 flex flex-col">
-                        <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1">
+                        <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
                           {product.brand} {product.model}
                         </div>
-                        <h3 className="text-lg font-bold text-white mb-2 leading-tight flex-1">
+                        <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight flex-1">
                           {product.name}
                         </h3>
-                        <div className="text-xl font-black text-white mb-4">
+                        <div className="text-xl font-black text-[#215BE1] mb-4">
                           {product.price}
                         </div>
                         

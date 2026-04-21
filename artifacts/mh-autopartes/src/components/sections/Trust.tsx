@@ -21,18 +21,18 @@ export function Trust() {
   ];
 
   return (
-    <section className="py-24 bg-card border-y border-border relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+    <section className="py-24 bg-white border-y border-gray-200 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#215BE1]/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Por qué elegirnos</h2>
-          <p className="text-lg text-muted-foreground font-light">
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Por qué elegirnos</h2>
+          <p className="text-lg text-gray-600 font-light">
             Más de dos décadas en el mercado nos han enseñado que en autopartes, la precisión y la confianza lo son todo.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 border-b border-border pb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 border-b border-gray-200 pb-20">
           {[
             { value: "21+", label: "Años de experiencia" },
             { value: "6", label: "Marcas especializadas" },
@@ -47,8 +47,8 @@ export function Trust() {
               transition={{ delay: i * 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl font-black text-primary mb-2">{stat.value}</div>
-              <div className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</div>
+              <div className="text-5xl md:text-6xl font-black text-[#215BE1] mb-2">{stat.value}</div>
+              <div className="text-sm font-bold text-gray-500 uppercase tracking-widest">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -63,13 +63,13 @@ export function Trust() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 + (i * 0.1) }}
-                className="bg-background border border-border p-8 rounded-xl"
+                className="bg-gray-50 border border-gray-200 p-8 rounded-xl shadow-sm"
               >
-                <div className="w-14 h-14 bg-secondary rounded-lg flex items-center justify-center mb-6">
-                  <Icon size={28} className="text-primary" />
+                <div className="w-14 h-14 bg-white shadow-sm border border-gray-200 rounded-lg flex items-center justify-center mb-6">
+                  <Icon size={28} className="text-[#215BE1]" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">
                   {feature.desc}
                 </p>
               </motion.div>
