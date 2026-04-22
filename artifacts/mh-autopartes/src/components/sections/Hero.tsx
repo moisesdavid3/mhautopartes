@@ -42,19 +42,19 @@ const slides = [
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80&auto=format",
+    src: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1600&q=80&auto=format",
     label: "Mazda · Kia · Hyundai",
     caption: "Repuestos para las marcas más confiables",
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1600&q=80&auto=format",
+    src: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80&auto=format",
     label: "Motor & Transmisión",
     caption: "Filtros, bandas, embragues y más",
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80&auto=format",
+    src: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1600&q=80&auto=format",
     label: "Chevrolet · Renault · Ford",
     caption: "21+ años siendo tu aliado en el taller",
     isLocal: false,
