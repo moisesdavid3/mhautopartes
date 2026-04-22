@@ -115,7 +115,7 @@ export function Hero() {
                   <img
                     src="https://mhautopartes.com/wp-content/uploads/2015/09/icon_mh.png"
                     alt="MH"
-                    className="w-24 h-24 md:w-36 md:h-36 object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
