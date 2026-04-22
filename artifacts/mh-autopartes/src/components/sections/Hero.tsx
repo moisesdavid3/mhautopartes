@@ -6,6 +6,7 @@ import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_1776826722702.JPG";
 import mazdaImg from "@assets/mazda_banner.png";
 import renaultImg from "@assets/renault_banner.png";
+import frenosImg from "@assets/frenos_banner.png";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -59,6 +60,12 @@ const slides = [
     src: renaultImg,
     label: "Chevrolet · Renault · Ford",
     caption: "21+ años siendo tu aliado en el taller",
+    isLocal: true,
+  },
+  {
+    src: frenosImg,
+    label: "Frenos · Refrigeración · Lubricación",
+    caption: "Discos, pastillas, líquidos y más para tu seguridad",
     isLocal: true,
   },
 ];
