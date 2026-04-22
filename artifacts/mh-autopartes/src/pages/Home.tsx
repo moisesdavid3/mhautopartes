@@ -9,15 +9,14 @@ import { About } from "@/components/sections/About";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState("");
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Hero />
       <BrandSelector selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand} />
-      <Catalog searchQuery={searchQuery} selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand} />
+      <Catalog selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand} />
       <Trust />
       <Stores />
       <About />
