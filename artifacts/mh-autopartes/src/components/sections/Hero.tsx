@@ -4,6 +4,7 @@ import { SiChevrolet, SiMazda, SiRenault, SiKia, SiHyundai, SiFord } from "react
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_1776826722702.JPG";
+import mazdaImg from "@assets/mazda_banner.png";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -42,10 +43,10 @@ const slides = [
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1600&q=80&auto=format",
+    src: mazdaImg,
     label: "Mazda · Kia · Hyundai",
     caption: "Repuestos para las marcas más confiables",
-    isLocal: false,
+    isLocal: true,
   },
   {
     src: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80&auto=format",
