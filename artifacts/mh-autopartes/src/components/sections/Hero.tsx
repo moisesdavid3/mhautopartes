@@ -22,13 +22,13 @@ const slides = [
   {
     src: palaceImg,
     label: "Sede Palace",
-    caption: "Calle 65 #52-34, Medellín",
+    caption: "Carrera 50 #40-64, Medellín",
     isLocal: true,
   },
   {
     src: chagualoImg,
     label: "Sede Chagualo",
-    caption: "Carrera 65, Chagualo, Medellín",
+    caption: "Calle 65 #52-34, Medellín",
     isLocal: true,
   },
   {
@@ -154,6 +154,12 @@ export function Hero() {
                   <p className="text-white font-bold text-xl md:text-2xl drop-shadow">{slides[current].label}</p>
                   <p className="text-white/70 text-sm md:text-base">{slides[current].caption}</p>
                 </motion.div>
+
+                {/* Línea Única */}
+                <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                  <span className="text-white/50 text-xs uppercase tracking-widest">Línea Única</span>
+                  <span className="text-white font-black text-lg md:text-xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                </div>
 
                 {/* Brand logos */}
                 <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">

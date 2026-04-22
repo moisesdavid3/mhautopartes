@@ -64,12 +64,12 @@ export function Footer() {
                 </li>
                 <li className="text-white/70 text-sm mt-3">
                   <span className="block text-white font-semibold mb-1">Sede Palace</span>
-                  Calle 85 #52-34, Medellín<br/>
+                  Carrera 50 #40-64, Medellín<br/>
                   Cel: 324 593 45 59
                 </li>
                 <li className="text-white/70 text-sm mt-3">
                   <span className="block text-white font-semibold mb-1">Sede Chagualo</span>
-                  Carrera 65 sector Chagualo, Medellín<br/>
+                  Calle 65 #52-34, Medellín<br/>
                   Cel: 314 893 62 36
                 </li>
               </ul>

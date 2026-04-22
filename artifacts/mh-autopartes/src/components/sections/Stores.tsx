@@ -6,7 +6,7 @@ import chagualoImg from "@assets/chagualo_1776826722702.JPG";
 const stores = [
   {
     name: "Sede Palace",
-    address: "Calle 65 #52-34, Medellín",
+    address: "Carrera 50 #40-64, Medellín",
     hours: "Lunes–Sábado 8am–6pm",
     phones: ["324 593 45 59", "324 593 45 57", "302 402 78 58"],
     lineaUnica: "(604) 444 56 65",
@@ -16,7 +16,7 @@ const stores = [
   },
   {
     name: "Sede Chagualo",
-    address: "Carrera 65, sector Chagualo, Medellín",
+    address: "Calle 65 #52-34, Medellín",
     hours: "Lunes–Sábado 8am–6pm",
     phones: ["314 893 62 36", "320 681 09 78", "324 593 45 55", "301 170 86 36"],
     lineaUnica: "(604) 444 56 65",
