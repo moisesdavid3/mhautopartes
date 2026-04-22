@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Link } from "wouter";
+import { SiInstagram, SiFacebook } from "react-icons/si";
 
 export function Footer() {
   const pixelColors = ["#F5C518","#F5C518","#E91E8C","#E91E8C","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
@@ -49,10 +50,16 @@ export function Footer() {
 
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Redes Sociales</h4>
-              <ul className="space-y-2">
-                <li><a href="https://instagram.com/mhautopartes" target="_blank" rel="noreferrer" className="text-white/70 hover:text-white hover:text-[#215BE1] transition-colors text-sm">Instagram @mhautopartes</a></li>
-                <li><a href="https://facebook.com/Mhautopartes" target="_blank" rel="noreferrer" className="text-white/70 hover:text-white hover:text-[#215BE1] transition-colors text-sm">Facebook @Mhautopartes</a></li>
-              </ul>
+              <div className="flex gap-4 items-center">
+                <a href="https://instagram.com/mhautopartes" target="_blank" rel="noreferrer" aria-label="Instagram"
+                  className="text-white/60 hover:text-[#E1306C] transition-colors">
+                  <SiInstagram size={28} />
+                </a>
+                <a href="https://facebook.com/Mhautopartes" target="_blank" rel="noreferrer" aria-label="Facebook"
+                  className="text-white/60 hover:text-[#1877F2] transition-colors">
+                  <SiFacebook size={28} />
+                </a>
+              </div>
             </div>
 
             <div>

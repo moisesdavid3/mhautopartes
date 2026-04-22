@@ -156,9 +156,9 @@ export function Hero() {
                 </motion.div>
 
                 {/* Línea Única */}
-                <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
                   <span className="text-white/50 text-xs uppercase tracking-widest">Línea Única</span>
-                  <span className="text-white font-black text-lg md:text-xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                  <span className="text-white font-black text-2xl md:text-3xl tracking-wide drop-shadow">(604) 444 56 65</span>
                 </div>
 
                 {/* Brand logos */}
