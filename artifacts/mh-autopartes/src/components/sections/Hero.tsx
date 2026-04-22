@@ -48,13 +48,13 @@ const slides = [
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1580820267682-426da823b514?w=1600&q=80&auto=format",
+    src: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1600&q=80&auto=format",
     label: "Motor & Transmisión",
     caption: "Filtros, bandas, embragues y más",
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1537984822441-cff330075342?w=1600&q=80&auto=format",
+    src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80&auto=format",
     label: "Chevrolet · Renault · Ford",
     caption: "21+ años siendo tu aliado en el taller",
     isLocal: false,
