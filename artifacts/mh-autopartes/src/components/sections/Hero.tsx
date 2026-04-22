@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_1776826722702.JPG";
 import mazdaImg from "@assets/mazda_banner.png";
+import renaultImg from "@assets/renault_banner.png";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -55,10 +56,10 @@ const slides = [
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1600&q=80&auto=format",
+    src: renaultImg,
     label: "Chevrolet · Renault · Ford",
     caption: "21+ años siendo tu aliado en el taller",
-    isLocal: false,
+    isLocal: true,
   },
 ];
 
