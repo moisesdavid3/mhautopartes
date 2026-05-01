@@ -1,182 +1,152 @@
-import { useState, useMemo } from "react";
-import { products, brands, categories } from "@/lib/data";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, Settings, Filter, ChevronDown } from "lucide-react";
+import { MessageCircle, ChevronDown, ChevronRight } from "lucide-react";
+import { catalogCategories, type Category } from "@/lib/catalogData";
 
-interface CatalogProps {
-  selectedBrand: string | null;
-  setSelectedBrand: (brand: string | null) => void;
+function buildWhatsAppLink(category: string, subcategory?: string) {
+  const text = subcategory
+    ? `Hola MH Autopartes, estoy buscando *${subcategory}* (${category}). ¿Tienen disponibilidad?`
+    : `Hola MH Autopartes, estoy buscando repuestos de *${category}*. ¿Tienen disponibilidad?`;
+  return `https://wa.me/573245934559?text=${encodeURIComponent(text)}`;
 }
 
-export function Catalog({ selectedBrand, setSelectedBrand }: CatalogProps) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-
-  const filteredProducts = useMemo(() => {
-    return products.filter(p => {
-      const matchesBrand = selectedBrand ? p.brand === selectedBrand : true;
-      const matchesCategory = selectedCategories.length > 0 ? selectedCategories.includes(p.category) : true;
-      return matchesBrand && matchesCategory;
-    });
-  }, [selectedBrand, selectedCategories]);
-
-  const toggleCategory = (cat: string) => {
-    setSelectedCategories(prev => prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]);
-  };
-
-  const generateWhatsAppLink = (productName: string, brand: string, model: string) => {
-    const text = `Hola MH Autopartes, deseo consultar disponibilidad del repuesto: ${productName} para el vehículo ${brand} ${model}`;
-    return `https://wa.me/573245934559?text=${encodeURIComponent(text)}`;
-  };
-
-  const CheckIcon = () => (
-    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  );
+function SubcategoryGrid({ category }: { category: Category }) {
+  if (category.subcategories.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        className="mt-2 mb-6 flex justify-center"
+      >
+        <a
+          href={buildWhatsAppLink(category.name)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-8 py-4 rounded-xl transition-colors shadow-lg text-base"
+        >
+          <MessageCircle size={22} />
+          Consultar disponibilidad de {category.name}
+        </a>
+      </motion.div>
+    );
+  }
 
   return (
-    <section id="catalogo" className="py-16 bg-gray-50 min-h-screen">
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.25 }}
+      className="mt-2 mb-6"
+    >
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {category.subcategories.map((sub, i) => (
+          <motion.div
+            key={sub.name}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: i * 0.04 }}
+            className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#215BE1]/50 hover:shadow-lg transition-all flex flex-col"
+          >
+            <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+              <img
+                src={sub.image}
+                alt={sub.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onError={(e) => {
+                  const t = e.target as HTMLImageElement;
+                  t.src = "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&q=80&auto=format";
+                }}
+              />
+            </div>
+            <div className="p-3 flex-1 flex flex-col justify-between gap-2">
+              <p className="text-sm font-bold text-gray-800 leading-tight">{sub.name}</p>
+              <a
+                href={buildWhatsAppLink(category.name, sub.name)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2 px-3 rounded-lg transition-colors text-xs"
+              >
+                <MessageCircle size={13} />
+                Consultar
+              </a>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+export function Catalog() {
+  const [openId, setOpenId] = useState<string | null>(null);
+
+  const toggle = (id: string) => setOpenId(prev => prev === id ? null : id);
+
+  return (
+    <section id="catalogo" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
 
-        <div className="mb-8">
+        <div className="mb-10">
+          <p className="text-[#215BE1] text-xs font-bold uppercase tracking-widest mb-2">Lo que tenemos para ti</p>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900">Catálogo de Repuestos</h2>
-          <p className="text-gray-500 mt-1">Repuestos para las marcas más confiables del mercado</p>
+          <p className="text-gray-500 mt-1">Selecciona una categoría para ver los repuestos disponibles</p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8">
-
-          {/* Mobile Filter Toggle */}
-          <button
-            className="md:hidden flex items-center justify-between w-full bg-white p-4 rounded-lg border border-gray-200 text-gray-800"
-            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
-          >
-            <span className="flex items-center gap-2 font-bold"><Filter size={20} /> Filtros</span>
-            <ChevronDown size={20} className={`transition-transform ${mobileFiltersOpen ? "rotate-180" : ""}`} />
-          </button>
-
-          {/* Sidebar Filters */}
-          <div className={`md:w-56 flex-shrink-0 flex flex-col gap-6 bg-white p-5 rounded-xl border border-gray-200 self-start ${mobileFiltersOpen ? "block" : "hidden md:block"}`}>
-            <div>
-              <h3 className="text-sm font-black text-gray-800 mb-3 uppercase tracking-wider border-b border-gray-100 pb-2">Marca</h3>
-              <div className="flex flex-col gap-2">
-                {brands.map(brand => (
-                  <label key={brand} className="flex items-center gap-3 cursor-pointer group">
-                    <div className="relative flex items-center justify-center flex-shrink-0">
-                      <input
-                        type="checkbox"
-                        checked={selectedBrand === brand}
-                        onChange={() => setSelectedBrand(selectedBrand === brand ? null : brand)}
-                        className="peer sr-only"
-                      />
-                      <div className="w-5 h-5 border-2 border-gray-300 rounded group-hover:border-[#215BE1] peer-checked:bg-[#215BE1] peer-checked:border-[#215BE1] transition-colors flex items-center justify-center">
-                        <span className="opacity-0 peer-checked:opacity-100 text-white hidden peer-checked:flex"><CheckIcon /></span>
-                      </div>
-                    </div>
-                    <span className="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{brand}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-black text-gray-800 mb-3 uppercase tracking-wider border-b border-gray-100 pb-2">Categoría</h3>
-              <div className="flex flex-col gap-2">
-                {categories.map(cat => (
-                  <label key={cat} className="flex items-center gap-3 cursor-pointer group">
-                    <div className="relative flex items-center justify-center flex-shrink-0">
-                      <input
-                        type="checkbox"
-                        checked={selectedCategories.includes(cat)}
-                        onChange={() => toggleCategory(cat)}
-                        className="peer sr-only"
-                      />
-                      <div className="w-5 h-5 border-2 border-gray-300 rounded group-hover:border-[#215BE1] peer-checked:bg-[#215BE1] peer-checked:border-[#215BE1] transition-colors flex items-center justify-center">
-                        <span className="opacity-0 peer-checked:opacity-100 text-white hidden peer-checked:flex"><CheckIcon /></span>
-                      </div>
-                    </div>
-                    <span className="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{cat}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {(selectedBrand || selectedCategories.length > 0) && (
-              <button
-                onClick={() => { setSelectedBrand(null); setSelectedCategories([]); }}
-                className="text-sm text-[#215BE1] hover:underline font-semibold text-left"
+        {/* Category grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-2">
+          {catalogCategories.map((cat) => {
+            const isOpen = openId === cat.id;
+            return (
+              <motion.button
+                key={cat.id}
+                onClick={() => toggle(cat.id)}
+                whileTap={{ scale: 0.97 }}
+                className={`relative group overflow-hidden rounded-xl aspect-[4/3] text-left focus:outline-none border-2 transition-all duration-200 ${
+                  isOpen
+                    ? "border-[#215BE1] shadow-[0_0_0_3px_rgba(33,91,225,0.2)]"
+                    : "border-transparent hover:border-[#215BE1]/40"
+                }`}
               >
-                Limpiar filtros
-              </button>
-            )}
-          </div>
-
-          {/* Product Grid */}
-          <div className="flex-1">
-            <div className="mb-4 flex justify-between items-center">
-              <span className="text-sm text-gray-500">{filteredProducts.length} resultado{filteredProducts.length !== 1 ? "s" : ""}</span>
-            </div>
-
-            {filteredProducts.length === 0 ? (
-              <div className="bg-white border border-gray-200 rounded-xl p-12 text-center flex flex-col items-center shadow-sm">
-                <Settings size={48} className="text-gray-300 mb-4" />
-                <h3 className="text-xl font-bold text-gray-800 mb-2">No se encontraron repuestos</h3>
-                <p className="text-gray-500">Intenta ajustar los filtros.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                <AnimatePresence>
-                  {filteredProducts.map((product) => (
-                    <motion.div
-                      key={product.id}
-                      layout
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#215BE1]/40 transition-all hover:shadow-lg group flex flex-col"
-                    >
-                      {/* Product image */}
-                      <div className="aspect-[4/3] overflow-hidden relative bg-gray-100">
-                        <img
-                          src={product.photo}
-                          alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          onError={(e) => {
-                            const t = e.target as HTMLImageElement;
-                            t.style.display = "none";
-                          }}
-                        />
-                      </div>
-
-                      <div className="p-4 flex-1 flex flex-col">
-                        <div className="text-xs font-bold text-[#215BE1] uppercase tracking-wider mb-1">
-                          {product.brand} — {product.model}
-                        </div>
-                        <h3 className="text-base font-bold text-gray-900 mb-2 leading-tight flex-1">
-                          {product.name}
-                        </h3>
-                        <div className="text-xl font-black text-gray-900 mb-4">
-                          {product.price}
-                        </div>
-
-                        <a
-                          href={generateWhatsAppLink(product.name, product.brand, product.model)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3 px-4 rounded-lg transition-colors"
-                        >
-                          <MessageCircle size={18} />
-                          Consultar disponibilidad
-                        </a>
-                      </div>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </div>
-            )}
-          </div>
+                <img
+                  src={cat.coverImage}
+                  alt={cat.name}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className={`absolute inset-0 transition-all duration-300 ${
+                  isOpen
+                    ? "bg-[#215BE1]/80"
+                    : "bg-gradient-to-t from-[#0B1526]/85 via-[#0B1526]/50 to-[#0B1526]/20 group-hover:from-[#215BE1]/70 group-hover:via-[#215BE1]/40 group-hover:to-[#215BE1]/10"
+                }`} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
+                  <span className="text-2xl mb-1">{cat.icon}</span>
+                  <p className="text-white font-black text-sm leading-tight drop-shadow">{cat.name}</p>
+                  <div className={`mt-1.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
+                    <ChevronDown size={16} className="text-white/80" />
+                  </div>
+                </div>
+              </motion.button>
+            );
+          })}
         </div>
+
+        {/* Subcategory panel — renders below the full grid */}
+        <AnimatePresence mode="wait">
+          {openId && (
+            <SubcategoryGrid
+              key={openId}
+              category={catalogCategories.find(c => c.id === openId)!}
+            />
+          )}
+        </AnimatePresence>
+
+        {/* No selection hint */}
+        {!openId && (
+          <p className="text-center text-gray-400 text-sm mt-6 pb-2">
+            ↑ Haz clic en una categoría para ver sus repuestos
+          </p>
+        )}
       </div>
     </section>
   );

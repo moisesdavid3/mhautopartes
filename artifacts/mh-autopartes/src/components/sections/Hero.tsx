@@ -162,10 +162,22 @@ export function Hero() {
                   <p className="text-white/70 text-sm md:text-base">{slides[current].caption}</p>
                 </motion.div>
 
-                {/* Línea Única */}
-                <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
-                  <span className="text-white/50 text-xs uppercase tracking-widest">Línea Única</span>
-                  <span className="text-white font-black text-2xl md:text-3xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                {/* CTA Buttons */}
+                <div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+                  <a
+                    href="#catalogo"
+                    className="inline-flex items-center gap-2 bg-[#215BE1] hover:bg-[#1a4bc0] text-white font-bold px-7 py-3 rounded-lg transition-colors shadow-lg text-sm uppercase tracking-wide"
+                  >
+                    Ver Catálogo
+                  </a>
+                  <a
+                    href="https://wa.me/573245934559?text=Hola%20MH%20Autopartes%2C%20quisiera%20hacer%20una%20consulta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-7 py-3 rounded-lg transition-colors shadow-lg text-sm uppercase tracking-wide"
+                  >
+                    Contáctanos
+                  </a>
                 </div>
 
                 {/* Brand logos */}

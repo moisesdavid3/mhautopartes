@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mh-autopartes",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "mh-autopartes", "dev"],
+      "env": {
+        "PORT": "5173",
+        "BASE_PATH": "/"
+      },
+      "port": 5173
+    }
+  ]
+}
