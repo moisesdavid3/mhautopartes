@@ -65,7 +65,7 @@ export function Stores() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col"
             >
               {/* Store photo */}
               <div className="relative h-64 overflow-hidden">
@@ -81,7 +81,7 @@ export function Stores() {
               </div>
 
               {/* Store info */}
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-1">
                 <div className="space-y-5 mb-8 text-gray-600">
                   <div className="flex items-start gap-4">
                     <MapPin size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
@@ -117,7 +117,7 @@ export function Stores() {
                   href={store.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-gray-100 hover:bg-[#215BE1] hover:text-white text-gray-900 font-bold py-3.5 px-4 rounded-xl transition-all border border-gray-200 hover:border-[#215BE1] text-sm"
+                  className="mt-auto flex items-center justify-center gap-2 w-full bg-gray-100 hover:bg-[#215BE1] hover:text-white text-gray-900 font-bold py-3.5 px-4 rounded-xl transition-all border border-gray-200 hover:border-[#215BE1] text-sm"
                 >
                   <MapPin size={18} />
                   Ver ubicación
