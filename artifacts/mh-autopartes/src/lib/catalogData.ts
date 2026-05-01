@@ -74,7 +74,7 @@ export const catalogCategories: Category[] = [
   {
     id: "motor",
     name: "Motor",
-    icon: "⚙️",
+    icon: "",
     coverImage: motorPistones,
     subcategories: [
       { name: "Anillos", image: motorAnillos },
@@ -91,7 +91,7 @@ export const catalogCategories: Category[] = [
   {
     id: "refrigeracion",
     name: "Refrigeración",
-    icon: "🌡️",
+    icon: "",
     coverImage: refrigRadiador,
     subcategories: [
       { name: "Bomba de agua", image: refrigBombaAgua },
@@ -105,7 +105,7 @@ export const catalogCategories: Category[] = [
   {
     id: "suspension",
     name: "Suspensión",
-    icon: "🔩",
+    icon: "",
     coverImage: suspAmortiguadores,
     subcategories: [
       { name: "Amortiguadores", image: suspAmortiguadores },
@@ -118,7 +118,7 @@ export const catalogCategories: Category[] = [
   {
     id: "transmision",
     name: "Transmisión",
-    icon: "🔧",
+    icon: "",
     coverImage: transmClutch,
     subcategories: [
       { name: "Arandelas de sincronismo", image: transmArandelas },
@@ -130,7 +130,7 @@ export const catalogCategories: Category[] = [
   {
     id: "electrico",
     name: "Eléctrico",
-    icon: "⚡",
+    icon: "",
     coverImage: electAlternador,
     subcategories: [
       { name: "Alternador", image: electAlternador },
@@ -151,14 +151,16 @@ export const catalogCategories: Category[] = [
   {
     id: "aceites",
     name: "Aceites y Lubricantes",
-    icon: "🛢️",
+    icon: "",
     coverImage: aceite,
-    subcategories: [],
+    subcategories: [
+      { name: "Aceites y Lubricantes", image: aceite },
+    ],
   },
   {
     id: "direccion",
     name: "Dirección",
-    icon: "🎯",
+    icon: "",
     coverImage: dirCaja,
     subcategories: [
       { name: "Barra de dirección", image: dirBarra },
@@ -172,7 +174,7 @@ export const catalogCategories: Category[] = [
   {
     id: "afinacion",
     name: "Afinación",
-    icon: "🔑",
+    icon: "",
     coverImage: afinFiltroAire,
     subcategories: [
       { name: "Aceite", image: aceite },
@@ -185,7 +187,7 @@ export const catalogCategories: Category[] = [
   {
     id: "distribucion",
     name: "Distribución",
-    icon: "⛓️",
+    icon: "",
     coverImage: distCadena,
     subcategories: [
       { name: "Cadena de distribución", image: distCadena },
@@ -200,7 +202,7 @@ export const catalogCategories: Category[] = [
   {
     id: "frenos",
     name: "Frenos",
-    icon: "🛑",
+    icon: "",
     coverImage: frenosDiscos,
     subcategories: [
       { name: "Anti ruidos", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80&auto=format" },

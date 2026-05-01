@@ -2,11 +2,11 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiChevrolet, SiMazda, SiRenault, SiKia, SiHyundai, SiFord } from "react-icons/si";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import mhLogoImg from "@assets/mh_icon.png";
 import palaceImg from "@assets/palace_1776826722701.JPG";
-import chagualoImg from "@assets/chagualo_1776826722702.JPG";
+import chagualoImg from "@assets/chagualo_nueva.JPG";
 import mazdaImg from "@assets/mazda_banner.png";
 import renaultImg from "@assets/renault_banner.png";
-import frenosImg from "@assets/frenos_banner.png";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -39,33 +39,15 @@ const slides = [
     isLocal: false,
   },
   {
-    src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80&auto=format",
-    label: "Suspensión & Dirección",
-    caption: "Especialistas en sistemas de suspensión",
-    isLocal: false,
-  },
-  {
     src: mazdaImg,
     label: "Mazda · Kia · Hyundai",
     caption: "Repuestos para las marcas más confiables",
     isLocal: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80&auto=format",
-    label: "Motor & Transmisión",
-    caption: "Filtros, bandas, embragues y más",
-    isLocal: false,
-  },
-  {
     src: renaultImg,
     label: "Chevrolet · Renault · Ford",
     caption: "21+ años siendo tu aliado en el taller",
-    isLocal: true,
-  },
-  {
-    src: frenosImg,
-    label: "Frenos · Refrigeración · Lubricación",
-    caption: "Discos, pastillas, líquidos y más para tu seguridad",
     isLocal: true,
   },
 ];
@@ -116,15 +98,13 @@ export function Hero() {
           <div className="container mx-auto px-4 md:px-8">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-14">
 
-              {/* MH circle icon */}
-              <div className="flex-shrink-0 hidden sm:block">
-                <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#0B1526]/80 border-4 border-white/20 flex items-center justify-center shadow-2xl">
-                  <img
-                    src="https://mhautopartes.com/wp-content/uploads/2015/09/icon_mh.png"
-                    alt="MH"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              {/* MH icon */}
+              <div className="flex-shrink-0 hidden sm:block -mt-28">
+                <img
+                  src={mhLogoImg}
+                  alt="MH"
+                  className="w-36 h-36 md:w-52 md:h-52 object-contain drop-shadow-2xl"
+                />
               </div>
 
               {/* Text content */}
@@ -136,7 +116,7 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-2 drop-shadow-lg"
                 >
-                  MH Autopartes
+                  Autopartes
                 </motion.h1>
 
                 {/* Pixel stripe */}
