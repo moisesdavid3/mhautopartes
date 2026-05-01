@@ -120,7 +120,7 @@ export function Stores() {
                   className="flex items-center justify-center gap-2 w-full bg-gray-100 hover:bg-[#215BE1] hover:text-white text-gray-900 font-bold py-3.5 px-4 rounded-xl transition-all border border-gray-200 hover:border-[#215BE1] text-sm"
                 >
                   <MapPin size={18} />
-                  Ver en Google Maps
+                  Ver ubicación
                 </a>
               </div>
             </motion.div>

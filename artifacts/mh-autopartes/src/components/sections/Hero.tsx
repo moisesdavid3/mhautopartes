@@ -5,8 +5,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import mhLogoImg from "@assets/mh_icon.png";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
-import mazdaImg from "@assets/mazda_banner.png";
-import renaultImg from "@assets/renault_banner.png";
+import mazda2Img from "@assets/marcas/mazda2.jpg";
+import mazda4Img from "@assets/marcas/mazda4.jpg";
+import mazda6Img from "@assets/marcas/mazda6.jpg";
+import kiaImg from "@assets/marcas/kia.jpg";
+import kia2Img from "@assets/marcas/kia2.jpg";
+import hyundaiImg from "@assets/marcas/hyundai.jpg";
+import hyundai2Img from "@assets/marcas/hyundai2.jpg";
+import hyundai3Img from "@assets/marcas/hyundai3.jpg";
+import chevroletImg from "@assets/marcas/chevrolet.jpg";
+import chevrolet3Img from "@assets/marcas/chevrolet3.jpg";
+import ford2Img from "@assets/marcas/ford2.jpg";
+import ford4Img from "@assets/marcas/ford4.jpg";
+import ford5Img from "@assets/marcas/ford5.jpg";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -33,21 +44,75 @@ const slides = [
     isLocal: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=80&auto=format",
-    label: "Repuestos Originales",
+    src: mazda2Img,
+    label: "Repuestos Originales y Homologados",
     caption: "Garantía de fábrica para tu vehículo",
-    isLocal: false,
+    isLocal: true,
   },
   {
-    src: mazdaImg,
-    label: "Mazda · Kia · Hyundai",
+    src: mazda4Img,
+    label: "Mazda",
+    caption: "Especialistas en repuestos Mazda",
+    isLocal: true,
+  },
+  {
+    src: mazda6Img,
+    label: "Mazda",
+    caption: "Calidad y precisión para tu Mazda",
+    isLocal: true,
+  },
+  {
+    src: kiaImg,
+    label: "Kia",
+    caption: "Repuestos originales y homologados para Kia",
+    isLocal: true,
+  },
+  {
+    src: kia2Img,
+    label: "Kia · Hyundai",
     caption: "Repuestos para las marcas más confiables",
     isLocal: true,
   },
   {
-    src: renaultImg,
-    label: "Chevrolet · Renault · Ford",
+    src: hyundaiImg,
+    label: "Hyundai",
+    caption: "Especialistas en marcas asiáticas",
+    isLocal: true,
+  },
+  {
+    src: hyundai2Img,
+    label: "Hyundai",
+    caption: "Calidad y precisión para tu Hyundai",
+    isLocal: true,
+  },
+  {
+    src: hyundai3Img,
+    label: "Hyundai",
+    caption: "Repuestos originales Hyundai",
+    isLocal: true,
+  },
+  {
+    src: chevroletImg,
+    label: "Chevrolet",
     caption: "21+ años siendo tu aliado en el taller",
+    isLocal: true,
+  },
+  {
+    src: chevrolet3Img,
+    label: "Chevrolet",
+    caption: "Repuestos originales Chevrolet",
+    isLocal: true,
+  },
+  {
+    src: ford4Img,
+    label: "Ford",
+    caption: "Repuestos Ford de alta calidad",
+    isLocal: true,
+  },
+  {
+    src: ford5Img,
+    label: "Ford · Chevrolet · Renault",
+    caption: "Todo lo que tu vehículo necesita",
     isLocal: true,
   },
 ];

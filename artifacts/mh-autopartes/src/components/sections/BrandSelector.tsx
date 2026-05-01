@@ -26,8 +26,7 @@ export function BrandSelector({ selectedBrand, setSelectedBrand }: BrandSelector
     <section className="py-14 bg-gray-50 border-y border-gray-200">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-8">
-          <p className="text-[#215BE1] text-xs font-bold uppercase tracking-widest mb-1">Marcas que manejamos</p>
-          <h2 className="text-2xl md:text-3xl font-black text-gray-900">Pregúntanos Por Estas Marcas</h2>
+<h2 className="text-2xl md:text-3xl font-black text-gray-900">Pregúntanos Por Estas Marcas</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

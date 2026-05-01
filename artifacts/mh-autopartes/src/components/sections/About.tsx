@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import chevroletBg from "@assets/marcas/chevrolet.jpg";
 
 export function About() {
   const timeline = [
@@ -9,18 +10,24 @@ export function About() {
   ];
 
   return (
-    <section id="nosotros" className="py-24 bg-white border-t border-gray-200">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="nosotros" className="py-24 relative overflow-hidden border-t border-gray-200">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={chevroletBg} alt="" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-white/88" />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Nuestra Historia</h2>
             <div className="w-20 h-2 bg-[#215BE1] mb-8 rounded-full"></div>
-            
+
             <div className="prose prose-lg text-gray-600 font-light leading-relaxed">
               <p>
                 MH Autopartes nació hace más de dos décadas con un objetivo claro: ofrecer repuestos de alta calidad con la precisión técnica que los mecánicos exigen.
@@ -40,7 +47,7 @@ export function About() {
 
             <div className="space-y-8">
               {timeline.map((item, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -51,8 +58,8 @@ export function About() {
                   <div className="absolute left-0 md:left-[21px] top-1 w-8 h-8 rounded-full bg-white border-4 border-white flex items-center justify-center shadow-sm">
                     <div className="w-2.5 h-2.5 rounded-full bg-[#215BE1]"></div>
                   </div>
-                  
-                  <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl hover:border-[#215BE1]/30 transition-colors shadow-sm">
+
+                  <div className="bg-white/90 border border-gray-200 p-6 rounded-xl hover:border-[#215BE1]/30 transition-colors shadow-sm">
                     <span className="text-[#215BE1] font-black text-xl block mb-1">{item.year}</span>
                     <h4 className="text-gray-900 font-bold text-lg mb-2">{item.title}</h4>
                     <p className="text-gray-600">{item.desc}</p>
@@ -61,7 +68,7 @@ export function About() {
               ))}
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

@@ -1,53 +1,25 @@
 import { useState } from "react";
-import { Menu, X, Phone, Clock } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SiInstagram, SiFacebook } from "react-icons/si";
+import mhLogo from "@assets/mh_logo.png";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "INICIO", href: "#" },
+    { name: "REPUESTOS", href: "#catalogo" },
     { name: "NOSOTROS", href: "#nosotros" },
-    { name: "PRODUCTOS", href: "#catalogo" },
-    { name: "TIENDAS", href: "#tiendas" },
     { name: "CONTACTO", href: "#tiendas" },
   ];
 
   return (
     <header className="sticky top-0 w-full z-50 shadow-lg">
-      {/* Top announcement bar */}
-      <div className="bg-[#215BE1] text-white text-xs py-2 px-4">
-        <div className="container mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="flex items-center gap-1.5 font-semibold">
-              <Phone size={12} />
-              Línea Única: (604) 444 56 65
-            </span>
-            <span className="hidden sm:flex items-center gap-1.5 text-white/80">
-              <Clock size={12} />
-              Lun–Sáb 8am–6pm
-            </span>
-          </div>
-          <div className="flex items-center gap-3">
-            <a href="https://instagram.com/mhautopartes" target="_blank" rel="noreferrer" aria-label="Instagram"
-              className="text-white/80 hover:text-white transition-colors">
-              <SiInstagram size={14} />
-            </a>
-            <a href="https://facebook.com/Mhautopartes" target="_blank" rel="noreferrer" aria-label="Facebook"
-              className="text-white/80 hover:text-white transition-colors">
-              <SiFacebook size={14} />
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main navbar */}
       <div className="bg-[#0B1526]">
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-16">
           <a href="#" className="flex items-center">
             <img
-              src="https://mhautopartes.com/wp-content/uploads/2018/06/logo-MH.png"
+              src={mhLogo}
               alt="MH Autopartes"
               className="h-12 w-auto object-contain"
             />

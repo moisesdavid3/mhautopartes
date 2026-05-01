@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { catalogCategories, type Category } from "@/lib/catalogData";
+import fordBgImg from "@assets/marcas/ford5.jpg";
 
 function buildWhatsAppLink(category: string, subcategory?: string) {
   const text = subcategory
@@ -96,7 +97,7 @@ export function Catalog() {
       {/* Faded Mazda background */}
       <div className="absolute inset-0 pointer-events-none select-none">
         <img
-          src="https://images.unsplash.com/photo-1723099971299-3789db53604c?w=1600&q=80&auto=format"
+          src={fordBgImg}
           alt=""
           className="w-full h-full object-cover object-center opacity-[0.30]"
         />

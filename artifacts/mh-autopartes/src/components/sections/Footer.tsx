@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 import { SiInstagram, SiFacebook } from "react-icons/si";
+import mhLogo from "@assets/mh_logo.png";
 
 export function Footer() {
   const pixelColors = ["#F5C518","#F5C518","#E91E8C","#E91E8C","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
@@ -24,10 +25,10 @@ export function Footer() {
             
             <div className="md:col-span-1">
               <Link href="/" className="mb-4 inline-block">
-                <img 
-                  src="https://mhautopartes.com/wp-content/uploads/2018/06/logo-MH.png" 
-                  alt="MH Autopartes" 
-                  className="h-16 w-auto object-contain brightness-0 invert"
+                <img
+                  src={mhLogo}
+                  alt="MH Autopartes"
+                  className="h-16 w-auto object-contain"
                 />
               </Link>
               <p className="text-white/70 text-sm font-light leading-relaxed">

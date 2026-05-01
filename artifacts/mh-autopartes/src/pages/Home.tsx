@@ -15,8 +15,8 @@ export default function Home() {
       <BrandSelector selectedBrand={null} setSelectedBrand={() => {}} />
       <Catalog />
       <Trust />
-      <Stores />
       <About />
+      <Stores />
       <Footer />
     </div>
   );
