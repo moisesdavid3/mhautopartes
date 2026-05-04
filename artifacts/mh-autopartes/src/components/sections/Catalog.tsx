@@ -2,13 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { catalogCategories, type Category } from "@/lib/catalogData";
-import fordBgImg from "@assets/marcas/ford5.jpg";
+import mazdaBgImg from "@assets/marcas/mazda_catalog.jpg";
+import { randomWaLink, randomWaNumber } from "@/lib/whatsapp";
 
 function buildWhatsAppLink(category: string, subcategory?: string) {
   const text = subcategory
     ? `Hola MH Autopartes, estoy buscando *${subcategory}* (${category}). ¿Tienen disponibilidad?`
     : `Hola MH Autopartes, estoy buscando repuestos de *${category}*. ¿Tienen disponibilidad?`;
-  return `https://wa.me/573245934559?text=${encodeURIComponent(text)}`;
+  return randomWaLink(text);
 }
 
 function SubcategoryPanel({ category }: { category: Category }) {
@@ -44,7 +45,7 @@ function SubcategoryPanel({ category }: { category: Category }) {
           <img
             src={sub.image}
             alt={sub.name}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
             onError={(e) => {
               (e.target as HTMLImageElement).src =
                 "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&q=80&auto=format";
@@ -52,11 +53,11 @@ function SubcategoryPanel({ category }: { category: Category }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 group-hover:from-[#215BE1]/80 group-hover:via-[#215BE1]/30 transition-all duration-300" />
           <div className="absolute bottom-0 left-0 p-3">
-            <p className="text-white font-black text-xs leading-tight drop-shadow">{sub.name}</p>
-            <p className="text-white/70 text-[10px] mt-0.5 flex items-center gap-1">
-              <MessageCircle size={10} />
+            <p className="text-white font-black text-sm leading-tight drop-shadow">{sub.name}</p>
+            <span className="inline-flex items-center gap-1 mt-2 bg-[#215BE1] text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md tracking-wide">
+              <MessageCircle size={11} />
               Consultar
-            </p>
+            </span>
           </div>
         </motion.a>
       ))}
@@ -97,7 +98,7 @@ export function Catalog() {
       {/* Faded Mazda background */}
       <div className="absolute inset-0 pointer-events-none select-none">
         <img
-          src={fordBgImg}
+          src={mazdaBgImg}
           alt=""
           className="w-full h-full object-cover object-center opacity-[0.30]"
         />
@@ -106,8 +107,7 @@ export function Catalog() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
 
         <div className="mb-8">
-          <p className="text-[#215BE1] text-xs font-bold uppercase tracking-widest mb-2">Lo que tenemos para ti</p>
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900">Encuentra tu repuesto</h2>
+<h2 className="text-3xl md:text-4xl font-black text-gray-900">Encuentra tu repuesto y pregúntanos</h2>
           <p className="text-gray-500 mt-1">Selecciona una categoría para ver los repuestos disponibles</p>
         </div>
 

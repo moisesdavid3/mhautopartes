@@ -2,22 +2,17 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiChevrolet, SiMazda, SiRenault, SiKia, SiHyundai, SiFord } from "react-icons/si";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { randomWaLink } from "@/lib/whatsapp";
 import mhLogoImg from "@assets/mh_icon.png";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
 import mazda2Img from "@assets/marcas/mazda2.jpg";
-import mazda4Img from "@assets/marcas/mazda4.jpg";
-import mazda6Img from "@assets/marcas/mazda6.jpg";
 import kiaImg from "@assets/marcas/kia.jpg";
-import kia2Img from "@assets/marcas/kia2.jpg";
 import hyundaiImg from "@assets/marcas/hyundai.jpg";
 import hyundai2Img from "@assets/marcas/hyundai2.jpg";
-import hyundai3Img from "@assets/marcas/hyundai3.jpg";
+import renaultImg from "@assets/marcas/renault2.jpg";
 import chevroletImg from "@assets/marcas/chevrolet.jpg";
-import chevrolet3Img from "@assets/marcas/chevrolet3.jpg";
-import ford2Img from "@assets/marcas/ford2.jpg";
 import ford4Img from "@assets/marcas/ford4.jpg";
-import ford5Img from "@assets/marcas/ford5.jpg";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -48,71 +43,32 @@ const slides = [
     label: "Repuestos Originales y Homologados",
     caption: "Garantía de fábrica para tu vehículo",
     isLocal: true,
-  },
-  {
-    src: mazda4Img,
-    label: "Mazda",
-    caption: "Especialistas en repuestos Mazda",
-    isLocal: true,
-  },
-  {
-    src: mazda6Img,
-    label: "Mazda",
-    caption: "Calidad y precisión para tu Mazda",
-    isLocal: true,
+    imgStyle: { transform: "scale(1.6) translateX(10%) translateY(8%) rotate(10deg)", transformOrigin: "center" },
   },
   {
     src: kiaImg,
-    label: "Kia",
-    caption: "Repuestos originales y homologados para Kia",
+    label: "Líderes en Repuestos Automotrices",
+    caption: "Más de 20 años de experiencia en comercialización de repuestos",
     isLocal: true,
-  },
-  {
-    src: kia2Img,
-    label: "Kia · Hyundai",
-    caption: "Repuestos para las marcas más confiables",
-    isLocal: true,
+    flipX: true,
   },
   {
     src: hyundaiImg,
-    label: "Hyundai",
-    caption: "Especialistas en marcas asiáticas",
+    label: "Calidad y Durabilidad Garantizada",
+    caption: "Productos de calidad para mejorar la seguridad al conducir tu vehículo",
     isLocal: true,
+    flipX: true,
   },
   {
-    src: hyundai2Img,
-    label: "Hyundai",
-    caption: "Calidad y precisión para tu Hyundai",
-    isLocal: true,
-  },
-  {
-    src: hyundai3Img,
-    label: "Hyundai",
-    caption: "Repuestos originales Hyundai",
-    isLocal: true,
-  },
-  {
-    src: chevroletImg,
-    label: "Chevrolet",
-    caption: "21+ años siendo tu aliado en el taller",
-    isLocal: true,
-  },
-  {
-    src: chevrolet3Img,
-    label: "Chevrolet",
-    caption: "Repuestos originales Chevrolet",
+    src: renaultImg,
+    label: "Servicio, Calidad y Precios Competitivos",
+    caption: "Relaciones duraderas con nuestros clientes, respaldadas por productos de calidad",
     isLocal: true,
   },
   {
     src: ford4Img,
-    label: "Ford",
-    caption: "Repuestos Ford de alta calidad",
-    isLocal: true,
-  },
-  {
-    src: ford5Img,
-    label: "Ford · Chevrolet · Renault",
-    caption: "Todo lo que tu vehículo necesita",
+    label: "¡Contáctanos, Estamos Listos para Ti!",
+    caption: "El placer de atenderte y los repuestos que tu vehículo necesita",
     isLocal: true,
   },
 ];
@@ -137,7 +93,7 @@ export function Hero() {
       onMouseLeave={() => setPaused(false)}
     >
       {/* Slide images */}
-      <div className="relative h-[55vh] md:h-[70vh] min-h-[420px]">
+      <div className="relative h-[55vh] md:h-[70vh] min-h-[420px] overflow-hidden">
         <AnimatePresence mode="sync">
           <motion.div
             key={current}
@@ -151,6 +107,10 @@ export function Hero() {
               src={slides[current].src}
               alt={slides[current].label}
               className="w-full h-full object-cover"
+              style={{
+                filter: "brightness(1.5)",
+                ...(slides[current].imgStyle ?? (slides[current].flipX ? { transform: "scaleX(-1)" } : {})),
+              }}
             />
             {/* Dark overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#0B1526]/85 via-[#0B1526]/60 to-[#0B1526]/30" />
@@ -216,7 +176,7 @@ export function Hero() {
                     Ver Catálogo
                   </a>
                   <a
-                    href="https://wa.me/573245934559?text=Hola%20MH%20Autopartes%2C%20quisiera%20hacer%20una%20consulta"
+                    href={randomWaLink("Hola MH Autopartes, quisiera hacer una consulta")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-7 py-3 rounded-lg transition-colors shadow-lg text-sm uppercase tracking-wide"

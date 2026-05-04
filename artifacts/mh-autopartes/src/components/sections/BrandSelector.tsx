@@ -48,8 +48,8 @@ export function BrandSelector({ selectedBrand, setSelectedBrand }: BrandSelector
                     : "border-gray-200 bg-white hover:border-[#215BE1]/40 hover:shadow-md"
                 }`}
               >
-                <Icon size={44} className={`mb-3 transition-colors ${isSelected ? "text-white" : "text-gray-500"}`} />
-                <span className={`font-bold text-sm ${isSelected ? "text-white" : "text-gray-700"}`}>
+                <Icon size={64} className={`mb-4 transition-colors ${isSelected ? "text-white" : "text-gray-500"}`} />
+                <span className={`font-bold text-base ${isSelected ? "text-white" : "text-gray-700"}`}>
                   {brand.name}
                 </span>
               </motion.button>

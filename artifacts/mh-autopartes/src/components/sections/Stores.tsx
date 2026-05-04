@@ -1,13 +1,14 @@
-import { MapPin, Clock, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Clock, Phone, MessageCircle, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
+import { randomWaLink } from "@/lib/whatsapp";
 
 const stores = [
   {
     name: "Sede Palace",
     address: "Carrera 50 #40-64, Medellín",
-    hours: "Lunes–Sábado 8am–6pm",
+    hours: "Lunes–Viernes 8am–6pm · Sábado 8am–2pm",
     phones: [
       { number: "324 593 45 59", wa: "573245934559" },
       { number: "324 593 45 57", wa: "573245934557" },
@@ -20,7 +21,7 @@ const stores = [
   {
     name: "Sede Chagualo",
     address: "Calle 65 #52-34, Medellín",
-    hours: "Lunes–Sábado 8am–6pm",
+    hours: "Lunes–Domingo 7am–9pm",
     phones: [
       { number: "314 893 62 36", wa: "573148936236" },
       { number: "320 681 09 78", wa: "573206810978" },
@@ -92,23 +93,33 @@ export function Stores() {
                     <span className="text-base">{store.hours}</span>
                   </div>
                   <div className="flex items-start gap-4">
+                    <PhoneCall size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
+                    <a
+                      href="tel:6044445665"
+                      className="font-bold text-gray-900 text-base hover:text-[#215BE1] transition-colors"
+                    >
+                      Línea Única: {store.lineaUnica}
+                    </a>
+                  </div>
+                  <div className="flex items-start gap-4">
                     <Phone size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
-                    <div className="flex flex-col gap-1.5">
-                      <div className="font-bold text-gray-900 text-base">Línea Única: {store.lineaUnica}</div>
-                      <div className="flex flex-wrap gap-2 mt-1">
+                    <div className="flex flex-col gap-2 w-full">
+                      <span className="font-semibold text-gray-700 text-sm">WhatsApp</span>
+                      <ul className="space-y-1.5">
                         {store.phones.map((p) => (
-                          <a
-                            key={p.wa}
-                            href={`https://wa.me/${p.wa}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-[#25D366]/30 hover:border-[#25D366] font-semibold text-sm px-3 py-1.5 rounded-lg transition-all"
-                          >
-                            <MessageCircle size={14} />
-                            {p.number}
-                          </a>
+                          <li key={p.wa}>
+                            <a
+                              href={randomWaLink(`Hola MH Autopartes, quisiera hacer una consulta`)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 text-[#25D366] hover:text-white bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/30 hover:border-[#25D366] font-semibold text-sm px-3 py-1.5 rounded-lg transition-all w-full"
+                            >
+                              <MessageCircle size={14} />
+                              {p.number}
+                            </a>
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   </div>
                 </div>

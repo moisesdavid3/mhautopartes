@@ -49,6 +49,23 @@ import distCorreas from "@assets/categorias/correadist.png";
 import distImpulsadores from "@assets/categorias/impulsadoresdistrib.png";
 import distPinon from "@assets/categorias/piñoncigueñal.png";
 
+import catCasquetes from "@assets/catalog/casquetes.jpg";
+import catValvulas from "@assets/catalog/valvulas.jpg";
+import catSensorTemp from "@assets/catalog/sensor_temp.jpg";
+import catBateria from "@assets/catalog/bateria.jpg";
+import catIluminacion from "@assets/catalog/iluminacion.jpg";
+import catInyectores from "@assets/catalog/inyectores.jpg";
+import catReguladores from "@assets/catalog/reguladores.jpg";
+import catSensores from "@assets/catalog/sensores.jpg";
+import catRotula from "@assets/catalog/rotula.jpg";
+import catCablesAlta from "@assets/catalog/cables_alta.jpg";
+import catCarburador from "@assets/catalog/carburador.jpg";
+import catTensores from "@assets/catalog/tensores.jpg";
+import catChupas from "@assets/catalog/chupas.jpg";
+import catCilindros from "@assets/catalog/cilindros_freno.jpg";
+import catAntiruidos from "@assets/catalog/antiruidos.jpg";
+import catSwitches from "@assets/catalog/switches.jpg";
+
 import frenosBandas from "@assets/categorias/bandasfreno.png";
 import frenosBomba from "@assets/categorias/bombafreno.png";
 import frenosBooster from "@assets/categorias/boosterfreno.png";
@@ -79,13 +96,13 @@ export const catalogCategories: Category[] = [
     subcategories: [
       { name: "Anillos", image: motorAnillos },
       { name: "Bomba de aceite", image: motorBombaAceite },
-      { name: "Casquetes", image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500&q=80&auto=format" },
+      { name: "Casquetes", image: catCasquetes },
       { name: "Eje de levas", image: motorEjeLevas },
       { name: "Empaques", image: motorEmpaques },
       { name: "Gorros", image: motorGorros },
       { name: "Pistones", image: motorPistones },
       { name: "Retenes", image: motorReten },
-      { name: "Válvulas", image: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=500&q=80&auto=format" },
+      { name: "Válvulas", image: catValvulas },
     ],
   },
   {
@@ -98,7 +115,7 @@ export const catalogCategories: Category[] = [
       { name: "Mangueras", image: refrigMangueras },
       { name: "Radiador", image: refrigRadiador },
       { name: "Termostato", image: refrigTermostato },
-      { name: "Sensor de temperatura", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80&auto=format" },
+      { name: "Sensor de temperatura", image: catSensorTemp },
       { name: "Ventilador", image: refrigVentilador },
     ],
   },
@@ -134,18 +151,18 @@ export const catalogCategories: Category[] = [
     coverImage: electAlternador,
     subcategories: [
       { name: "Alternador", image: electAlternador },
-      { name: "Batería", image: "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=500&q=80&auto=format" },
+      { name: "Batería", image: catBateria },
       { name: "Bobina", image: electBobina },
       { name: "Bujías", image: electBujias },
       { name: "Boquereles eléctricos", image: electBoquetes },
-      { name: "Iluminación", image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&q=80&auto=format" },
-      { name: "Inyectores", image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500&q=80&auto=format" },
+      { name: "Iluminación", image: catIluminacion },
+      { name: "Inyectores", image: catInyectores },
       { name: "Motor de arranque", image: electMotorArranque },
-      { name: "Reguladores", image: "https://images.unsplash.com/photo-1625047509252-ab38fb5c7343?w=500&q=80&auto=format" },
-      { name: "Switches de encendido", image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500&q=80&auto=format" },
-      { name: "Sensores", image: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=500&q=80&auto=format" },
-      { name: "Switches de parqueo", image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=500&q=80&auto=format" },
-      { name: "Switches de luces", image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=500&q=80&auto=format" },
+      { name: "Reguladores", image: catReguladores },
+      { name: "Switches de encendido", image: catSwitches },
+      { name: "Sensores", image: catSensores },
+      { name: "Switches de parqueo", image: catSwitches },
+      { name: "Switches de luces", image: catSwitches },
     ],
   },
   {
@@ -167,7 +184,7 @@ export const catalogCategories: Category[] = [
       { name: "Brazos de dirección", image: dirBrazos },
       { name: "Biela", image: dirBiela },
       { name: "Caja de dirección", image: dirCaja },
-      { name: "Rótula", image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500&q=80&auto=format" },
+      { name: "Rótula", image: catRotula },
       { name: "Terminales", image: dirTerminales },
     ],
   },
@@ -178,10 +195,10 @@ export const catalogCategories: Category[] = [
     coverImage: afinFiltroAire,
     subcategories: [
       { name: "Aceite", image: aceite },
-      { name: "Cables de alta", image: "https://images.unsplash.com/photo-1563461660947-507ef49e9c47?w=500&q=80&auto=format" },
+      { name: "Cables de alta", image: catCablesAlta },
       { name: "Filtro de aire", image: afinFiltroAire },
       { name: "Filtro de gasolina", image: afinFiltroGasolina },
-      { name: "Partes de carburador", image: "https://images.unsplash.com/photo-1630259501578-a5ea4e01eda3?w=500&q=80&auto=format" },
+      { name: "Partes de carburador", image: catCarburador },
     ],
   },
   {
@@ -196,7 +213,7 @@ export const catalogCategories: Category[] = [
       { name: "Impulsadores", image: distImpulsadores },
       { name: "Gorros", image: motorGorros },
       { name: "Piñón cigüeñal", image: distPinon },
-      { name: "Tensores", image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80&auto=format" },
+      { name: "Tensores", image: catTensores },
     ],
   },
   {
@@ -205,12 +222,12 @@ export const catalogCategories: Category[] = [
     icon: "",
     coverImage: frenosDiscos,
     subcategories: [
-      { name: "Anti ruidos", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80&auto=format" },
+      { name: "Anti ruidos", image: catAntiruidos },
       { name: "Bandas", image: frenosBandas },
       { name: "Bomba de freno", image: frenosBomba },
       { name: "Booster", image: frenosBooster },
-      { name: "Chupas", image: "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=500&q=80&auto=format" },
-      { name: "Cilindros", image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500&q=80&auto=format" },
+      { name: "Chupas", image: catChupas },
+      { name: "Cilindros", image: catCilindros },
       { name: "Discos", image: frenosDiscos },
       { name: "Líquido de freno", image: frenosLiquido },
       { name: "Mangueras", image: frenosMangueras },
