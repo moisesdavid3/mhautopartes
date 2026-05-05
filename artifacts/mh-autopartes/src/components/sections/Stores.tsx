@@ -36,47 +36,31 @@ const stores = [
 
 export function Stores() {
   return (
-    <section id="tiendas" className="py-20 bg-white relative overflow-hidden">
+    <section id="tiendas" className="py-20 bg-[#D6E4F7] relative overflow-hidden">
 
-      {/* Animated diagonal lines — z-0, behind cards */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      {/* Falling bars — right margin only (outside the Chagualo card edge) */}
+      <div className="absolute top-0 right-0 h-full pointer-events-none overflow-hidden z-0" style={{ width: "clamp(1rem, calc(50vw - 576px + 1.5rem), 12vw)" }}>
         <style>{`
-          @keyframes lineFwd { 0% { transform: rotate(-6deg) scaleX(1.8) translateX(-110%); } 100% { transform: rotate(-6deg) scaleX(1.8) translateX(110%); } }
-          @keyframes lineRev { 0% { transform: rotate(-6deg) scaleX(1.8) translateX(110%);  } 100% { transform: rotate(-6deg) scaleX(1.8) translateX(-110%); } }
+          @keyframes fallBar { 0% { transform: translateY(-100%); } 100% { transform: translateY(110%); } }
         `}</style>
         {[
-          { color: "#215BE1", opacity: 0.20, width: 32, duration: 7,  delay: 0,    dir: "Fwd", top: "3%"  },
-          { color: "#5BA4F5", opacity: 0.18, width: 18, duration: 6,  delay: 0.6,  dir: "Rev", top: "9%"  },
-          { color: "#215BE1", opacity: 0.15, width: 44, duration: 8,  delay: 1.2,  dir: "Fwd", top: "15%" },
-          { color: "#5BA4F5", opacity: 0.22, width: 22, duration: 5,  delay: 0.3,  dir: "Rev", top: "21%" },
-          { color: "#215BE1", opacity: 0.17, width: 36, duration: 9,  delay: 1.8,  dir: "Fwd", top: "27%" },
-          { color: "#5BA4F5", opacity: 0.14, width: 14, duration: 6,  delay: 0.9,  dir: "Rev", top: "33%" },
-          { color: "#215BE1", opacity: 0.20, width: 48, duration: 7,  delay: 2.4,  dir: "Fwd", top: "39%" },
-          { color: "#5BA4F5", opacity: 0.16, width: 20, duration: 5,  delay: 0,    dir: "Rev", top: "45%" },
-          { color: "#215BE1", opacity: 0.13, width: 28, duration: 8,  delay: 1.5,  dir: "Fwd", top: "51%" },
-          { color: "#5BA4F5", opacity: 0.21, width: 38, duration: 6,  delay: 0.7,  dir: "Rev", top: "57%" },
-          { color: "#215BE1", opacity: 0.18, width: 16, duration: 7,  delay: 3.0,  dir: "Fwd", top: "63%" },
-          { color: "#5BA4F5", opacity: 0.15, width: 42, duration: 5,  delay: 1.1,  dir: "Rev", top: "69%" },
-          { color: "#215BE1", opacity: 0.22, width: 24, duration: 9,  delay: 2.0,  dir: "Fwd", top: "75%" },
-          { color: "#5BA4F5", opacity: 0.17, width: 34, duration: 6,  delay: 0.4,  dir: "Rev", top: "81%" },
-          { color: "#215BE1", opacity: 0.14, width: 20, duration: 7,  delay: 1.7,  dir: "Fwd", top: "87%" },
-          { color: "#5BA4F5", opacity: 0.19, width: 46, duration: 5,  delay: 2.8,  dir: "Rev", top: "93%" },
-          { color: "#215BE1", opacity: 0.16, width: 26, duration: 8,  delay: 0.2,  dir: "Fwd", top: "6%"  },
-          { color: "#5BA4F5", opacity: 0.13, width: 30, duration: 6,  delay: 1.4,  dir: "Rev", top: "18%" },
-          { color: "#215BE1", opacity: 0.19, width: 40, duration: 7,  delay: 2.2,  dir: "Fwd", top: "48%" },
-          { color: "#5BA4F5", opacity: 0.20, width: 18, duration: 5,  delay: 3.5,  dir: "Rev", top: "72%" },
-        ].map((line, i) => (
+          { color: "#215BE1", opacity: 0.22, width: 20, duration: 4,   delay: 0,    left: "8%"  },
+          { color: "#1A3FA0", opacity: 0.18, width: 30, duration: 3.5, delay: 0.8,  left: "30%" },
+          { color: "#5BA4F5", opacity: 0.20, width: 14, duration: 5,   delay: 0.4,  left: "55%" },
+          { color: "#7EC8F7", opacity: 0.16, width: 24, duration: 4.5, delay: 1.4,  left: "75%" },
+          { color: "#215BE1", opacity: 0.19, width: 18, duration: 6,   delay: 2.0,  left: "92%" },
+        ].map((bar, j) => (
           <div
-            key={i}
+            key={j}
             style={{
               position: "absolute",
-              top: line.top,
-              left: 0,
-              width: "100%",
-              height: `${line.width}px`,
-              background: `linear-gradient(90deg, transparent 0%, ${line.color} 10%, ${line.color} 90%, transparent 100%)`,
-              opacity: line.opacity,
-              animation: `line${line.dir} ${line.duration}s linear ${line.delay}s infinite`,
+              top: 0,
+              left: bar.left,
+              width: `${bar.width}px`,
+              height: "100%",
+              background: `linear-gradient(180deg, transparent 0%, ${bar.color} 15%, ${bar.color} 85%, transparent 100%)`,
+              opacity: bar.opacity,
+              animation: `fallBar ${bar.duration}s linear ${bar.delay}s infinite`,
             }}
           />
         ))}
@@ -97,7 +81,7 @@ export function Stores() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col relative"
             >
               {/* Store photo */}
               <div className="relative h-64 overflow-hidden">
