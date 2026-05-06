@@ -75,7 +75,7 @@ const slides = [
   {
     src: ford3Img,
     label: "¡Contáctanos, Estamos Listos para Ti!",
-    caption: "El placer de atenderte y los repuestos que tu vehículo necesita",
+    caption: "Brindaremos el mejor servicio a usted y su vehículo",
     isLocal: true,
   },
 ];
