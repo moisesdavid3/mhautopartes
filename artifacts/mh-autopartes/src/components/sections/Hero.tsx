@@ -40,8 +40,8 @@ const slides = [
   },
   {
     src: chevOnixImg,
-    label: "Líderes en Repuestos Automotrices",
-    caption: "Más de 20 años de experiencia en comercialización de repuestos",
+    label: "Dos Sedes en Medellín a tu Servicio",
+    caption: "Encuéntranos en el Palace y Chagualo — inventario completo y entrega inmediata en mostrador",
     isLocal: true,
   },
   {
