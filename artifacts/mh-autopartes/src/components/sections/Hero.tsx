@@ -4,7 +4,7 @@ import { SiChevrolet, SiMazda, SiRenault, SiKia, SiHyundai, SiFord } from "react
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { randomWaLink } from "@/lib/whatsapp";
 import mhLogoImg from "@assets/mh_logo.png";
-import palaceImg from "@assets/palace_1776826722701.JPG";
+import palaceImg from "@assets/palace_nueva.jpg";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
 import mazda2Img from "@assets/marcas/mazda2.jpg";
 import mazdacx30Img from "@assets/marcas/mazdacx30.jpg";
