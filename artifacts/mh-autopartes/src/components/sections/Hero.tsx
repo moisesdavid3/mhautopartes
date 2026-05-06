@@ -126,7 +126,7 @@ export function Hero() {
               <img
                 src={mhLogoImg}
                 alt="MH Autopartes"
-                className="w-80 md:w-[28rem] object-contain drop-shadow-2xl"
+                className="w-96 md:w-[36rem] object-contain drop-shadow-2xl"
               />
 
               {/* Slide caption */}
