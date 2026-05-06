@@ -32,6 +32,7 @@ const slides = [
     label: "Bienvenido a Nuestra Sede Palace",
     caption: "Tu destino de confianza para repuestos originales y homologados en Medellín",
     isLocal: true,
+    duration: 10000,
   },
   {
     src: mazdacx30Img,
@@ -88,9 +89,10 @@ export function Hero() {
 
   useEffect(() => {
     if (paused) return;
-    const timer = setInterval(next, 4500);
-    return () => clearInterval(timer);
-  }, [next, paused]);
+    const duration = (slides[current] as any).duration ?? 4500;
+    const timer = setTimeout(next, duration);
+    return () => clearTimeout(timer);
+  }, [next, paused, current]);
 
   return (
     <section
