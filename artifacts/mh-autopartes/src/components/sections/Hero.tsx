@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SiChevrolet, SiMazda, SiRenault, SiKia, SiHyundai, SiFord } from "react-icons/si";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { randomWaLink } from "@/lib/whatsapp";
-import mhLogoImg from "@assets/mh_icon.png";
+import mhLogoImg from "@assets/mh_logo.png";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
 import mazda2Img from "@assets/marcas/mazda2.jpg";
@@ -122,37 +122,17 @@ export function Hero() {
           <div className="container mx-auto px-4 md:px-8">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-14">
 
-              {/* MH icon */}
-              <div className="flex-shrink-0 hidden sm:block -mt-28">
+              {/* Full MH Autopartes logo */}
+              <div className="flex-shrink-0 hidden sm:block">
                 <img
                   src={mhLogoImg}
-                  alt="MH"
-                  className="w-36 h-36 md:w-52 md:h-52 object-contain drop-shadow-2xl"
+                  alt="MH Autopartes"
+                  className="w-72 md:w-96 object-contain drop-shadow-2xl"
                 />
               </div>
 
               {/* Text content */}
               <div className="flex-1 text-center md:text-left">
-                <motion.h1
-                  key={`title-${current}`}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-2 drop-shadow-lg"
-                >
-                  Autopartes
-                </motion.h1>
-
-                {/* Pixel stripe */}
-                <div className="flex mb-4 mt-2 max-w-md mx-auto md:mx-0">
-                  {Array.from({ length: 24 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="h-3 flex-1"
-                      style={{ backgroundColor: pixelColors[i % pixelColors.length], minWidth: 6 }}
-                    />
-                  ))}
-                </div>
 
                 {/* Slide caption */}
                 <motion.div
