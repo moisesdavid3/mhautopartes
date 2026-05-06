@@ -1,4 +1,5 @@
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import type { Variants, Easing } from "framer-motion";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { BrandSelector } from "@/components/sections/BrandSelector";
@@ -9,9 +10,10 @@ import { About } from "@/components/sections/About";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 
+const easeOut: Easing = "easeOut";
 const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 48 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
 };
 
 function AnimatedSection({ children }: { children: React.ReactNode }) {
