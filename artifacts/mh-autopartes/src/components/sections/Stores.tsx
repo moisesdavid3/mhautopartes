@@ -17,6 +17,7 @@ const stores = [
     lineaUnica: "(604) 444 56 65",
     mapsLink: "https://maps.app.goo.gl/PDTbERvQ6eU1nrR38",
     photo: palaceImg,
+    objectPosition: "center top",
   },
   {
     name: "Sede Chagualo",
@@ -89,6 +90,7 @@ export function Stores() {
                   src={store.photo}
                   alt={store.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  style={{ objectPosition: (store as any).objectPosition ?? "center center" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5">
