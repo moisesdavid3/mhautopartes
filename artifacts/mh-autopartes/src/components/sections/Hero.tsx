@@ -188,9 +188,8 @@ export function Hero() {
                 {/* Brand logos */}
                 <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">
                   {brandIcons.map(({ name, icon: Icon }) => (
-                    <div key={name} className="flex flex-col items-center gap-0.5 group cursor-pointer">
+                    <div key={name} className="flex items-center justify-center group cursor-pointer">
                       <Icon size={32} color="white" className="opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all drop-shadow" />
-                      <span className="text-[9px] text-white/60 font-semibold uppercase tracking-wide">{name}</span>
                     </div>
                   ))}
                 </div>
