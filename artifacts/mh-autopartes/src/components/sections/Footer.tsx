@@ -9,6 +9,8 @@ export function Footer() {
 
   return (
     <>
+      {/* Red line above footer */}
+      <div className="w-full h-1.5 bg-[#CC0000]" />
       <footer className="bg-[#0B1526] pt-0 pb-8 relative overflow-hidden">
 
         {/* Diagonal stripes — top left */}
