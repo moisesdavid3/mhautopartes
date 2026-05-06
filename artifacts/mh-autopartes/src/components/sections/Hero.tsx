@@ -67,8 +67,8 @@ const slides = [
   },
   {
     src: mazda2Img,
-    label: "Repuestos Originales y Homologados",
-    caption: "Garantía de fábrica para tu vehículo",
+    label: "Variedad y Disponibilidad Inmediata",
+    caption: "Amplio inventario de repuestos para las marcas más populares del mercado",
     isLocal: true,
     imgStyle: { transform: "scale(1.6) translateX(10%) translateY(8%) rotate(10deg)", transformOrigin: "center" },
   },
