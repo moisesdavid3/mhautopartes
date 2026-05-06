@@ -31,6 +31,7 @@ const slides = [
     label: "Repuestos Originales y Homologados",
     caption: "Garantía de fábrica para tu vehículo",
     isLocal: true,
+    imgStyle: { transform: "translateY(-10%)" },
   },
   {
     src: renaultCapturImg,
