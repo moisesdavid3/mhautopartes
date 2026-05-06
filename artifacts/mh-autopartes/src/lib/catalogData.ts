@@ -9,7 +9,7 @@ import motorGorros from "@assets/categorias/motor-gorros.png";
 import motorPistones from "@assets/categorias/motor-pistones.png";
 import motorReten from "@assets/categorias/motor-reten.png";
 
-import refrigBombaAgua from "@assets/categorias/refrigeración-bombaagua.png";
+import refrigBombaAgua from "@assets/categorias/refrigeracion-bombaagua.png";
 import refrigMangueras from "@assets/categorias/refri-mangueras.png";
 import refrigRadiador from "@assets/categorias/Refri-radiador.png";
 import refrigTermostato from "@assets/categorias/refri-termostato.png";
@@ -24,7 +24,7 @@ import suspTijeras from "@assets/categorias/susp-tijeras.png";
 import transmArandelas from "@assets/categorias/transm-arandelas.png";
 import transmPuntas from "@assets/categorias/transm-puntas.png";
 import transmClutch from "@assets/categorias/transm-clutch.png";
-import transmPinones from "@assets/categorias/transm-piñones.jpg";
+import transmPinones from "@assets/categorias/transm-pinones.jpg";
 
 import electAlternador from "@assets/categorias/electrico-alrernador.jpg";
 import electBobina from "@assets/categorias/elect-bobina.jpg";
@@ -47,7 +47,7 @@ import distCadena from "@assets/categorias/cadenadistrib.png";
 import distCiguenal from "@assets/categorias/ciguenal.png";
 import distCorreas from "@assets/categorias/correadist.png";
 import distImpulsadores from "@assets/categorias/impulsadoresdistrib.png";
-import distPinon from "@assets/categorias/piñoncigueñal.png";
+import distPinon from "@assets/categorias/pinonciguenal.png";
 
 import catCasquetes from "@assets/catalog/casquetes.jpg";
 import catValvulas from "@assets/catalog/valvulas.jpg";
