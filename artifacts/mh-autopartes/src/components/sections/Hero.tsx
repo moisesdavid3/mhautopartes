@@ -29,8 +29,8 @@ const pixelColors = ["#F5C518","#F5C518","#CC0000","#CC0000","#FFFFFF","#FFFFFF"
 const slides = [
   {
     video: palaceVideo,
-    label: "Bienvenido a Nuestra Sede Palace",
-    caption: "Tu destino de confianza para repuestos originales y homologados en Medellín",
+    label: "Bienvenidos a MH Autopartes",
+    caption: "Tu almacén de confianza para repuestos originales y homologados en Medellín",
     isLocal: true,
     duration: 10000,
   },
