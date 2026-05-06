@@ -13,6 +13,7 @@ import hyundaiImg from "@assets/marcas/hyundai.jpg";
 import chevOnixImg from "@assets/marcas/chev_onix.jpg";
 import renaultCapturImg from "@assets/marcas/renault_captur.jpg";
 import ford3Img from "@assets/marcas/ford3.jpg";
+import palaceVideo from "@assets/video_palace.mp4";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -26,6 +27,12 @@ const brandIcons = [
 const pixelColors = ["#F5C518","#F5C518","#CC0000","#CC0000","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
 
 const slides = [
+  {
+    video: palaceVideo,
+    label: "Bienvenido a Nuestra Sede Palace",
+    caption: "Tu destino de confianza para repuestos originales y homologados en Medellín",
+    isLocal: true,
+  },
   {
     src: mazdacx30Img,
     label: "Repuestos Originales y Homologados",
@@ -102,15 +109,26 @@ export function Hero() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <img
-              src={slides[current].src}
-              alt={slides[current].label}
-              className="w-full h-full object-cover"
-              style={{
-                filter: "brightness(1.1)",
-                ...(slides[current].imgStyle ?? (slides[current].flipX ? { transform: "scaleX(-1)" } : {})),
-              }}
-            />
+            {(slides[current] as any).video ? (
+              <video
+                src={(slides[current] as any).video}
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <img
+                src={(slides[current] as any).src}
+                alt={slides[current].label}
+                className="w-full h-full object-cover"
+                style={{
+                  filter: "brightness(1.1)",
+                  ...((slides[current] as any).imgStyle ?? ((slides[current] as any).flipX ? { transform: "scaleX(-1)" } : {})),
+                }}
+              />
+            )}
             {/* Dark overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#0B1526]/85 via-[#0B1526]/60 to-[#0B1526]/30" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B1526]/70 via-transparent to-transparent" />
