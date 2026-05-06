@@ -31,12 +31,14 @@ const slides = [
     label: "Repuestos Originales y Homologados",
     caption: "Garantía de fábrica para tu vehículo",
     isLocal: true,
+    imgStyle: { transform: "translateX(10%)" },
   },
   {
     src: renaultDusterImg,
     label: "Servicio, Calidad y Precios Competitivos",
     caption: "Relaciones duraderas con nuestros clientes, respaldadas por productos de calidad",
     isLocal: true,
+    imgStyle: { transform: "translateX(10%)" },
   },
   {
     src: chevOnixImg,
