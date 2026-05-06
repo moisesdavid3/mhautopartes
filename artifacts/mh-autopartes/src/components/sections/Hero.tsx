@@ -8,10 +8,9 @@ import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
 import mazda2Img from "@assets/marcas/mazda2.jpg";
 import mazdacx30Img from "@assets/marcas/mazdacx30.jpg";
-import kiaImg from "@assets/marcas/kia.jpg";
 import kia_picantoImg from "@assets/marcas/kia_picanto.jpg";
 import hyundaiImg from "@assets/marcas/hyundai.jpg";
-import renaultDusterImg from "@assets/marcas/renault_duster.jpg";
+import chevOnixImg from "@assets/marcas/chev_onix.jpg";
 import ford3Img from "@assets/marcas/ford3.jpg";
 
 const brandIcons = [
@@ -27,21 +26,21 @@ const pixelColors = ["#F5C518","#F5C518","#CC0000","#CC0000","#FFFFFF","#FFFFFF"
 
 const slides = [
   {
+    src: mazdacx30Img,
+    label: "Repuestos Originales y Homologados",
+    caption: "Garantía de fábrica para tu vehículo",
+    isLocal: true,
+  },
+  {
     src: palaceImg,
     label: "Sede Palace",
     caption: "Carrera 50 #40-64, Medellín",
     isLocal: true,
   },
   {
-    src: renaultDusterImg,
-    label: "Servicio, Calidad y Precios Competitivos",
-    caption: "Relaciones duraderas con nuestros clientes, respaldadas por productos de calidad",
-    isLocal: true,
-  },
-  {
-    src: mazdacx30Img,
-    label: "Repuestos Originales y Homologados",
-    caption: "Garantía de fábrica para tu vehículo",
+    src: chevOnixImg,
+    label: "Líderes en Repuestos Automotrices",
+    caption: "Más de 20 años de experiencia en comercialización de repuestos",
     isLocal: true,
   },
   {
