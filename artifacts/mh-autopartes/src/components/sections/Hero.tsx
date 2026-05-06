@@ -7,12 +7,12 @@ import mhLogoImg from "@assets/mh_icon.png";
 import palaceImg from "@assets/palace_1776826722701.JPG";
 import chagualoImg from "@assets/chagualo_nueva.JPG";
 import mazda2Img from "@assets/marcas/mazda2.jpg";
+import mazdacx30Img from "@assets/marcas/mazdacx30.jpg";
 import kiaImg from "@assets/marcas/kia.jpg";
+import kia_picantoImg from "@assets/marcas/kia_picanto.jpg";
 import hyundaiImg from "@assets/marcas/hyundai.jpg";
-import hyundai2Img from "@assets/marcas/hyundai2.jpg";
-import renaultImg from "@assets/marcas/renault2.jpg";
-import chevroletImg from "@assets/marcas/chevrolet.jpg";
-import ford4Img from "@assets/marcas/ford4.jpg";
+import renaultDusterImg from "@assets/marcas/renault_duster.jpg";
+import ford3Img from "@assets/marcas/ford3.jpg";
 
 const brandIcons = [
   { name: "Mazda", icon: SiMazda },
@@ -33,24 +33,22 @@ const slides = [
     isLocal: true,
   },
   {
-    src: chagualoImg,
-    label: "Sede Chagualo",
-    caption: "Calle 65 #52-34, Medellín",
+    src: renaultDusterImg,
+    label: "Servicio, Calidad y Precios Competitivos",
+    caption: "Relaciones duraderas con nuestros clientes, respaldadas por productos de calidad",
     isLocal: true,
   },
   {
-    src: mazda2Img,
+    src: mazdacx30Img,
     label: "Repuestos Originales y Homologados",
     caption: "Garantía de fábrica para tu vehículo",
     isLocal: true,
-    imgStyle: { transform: "scale(1.6) translateX(10%) translateY(8%) rotate(10deg)", transformOrigin: "center" },
   },
   {
-    src: kiaImg,
+    src: kia_picantoImg,
     label: "Líderes en Repuestos Automotrices",
     caption: "Más de 20 años de experiencia en comercialización de repuestos",
     isLocal: true,
-    flipX: true,
   },
   {
     src: hyundaiImg,
@@ -60,13 +58,14 @@ const slides = [
     flipX: true,
   },
   {
-    src: renaultImg,
-    label: "Servicio, Calidad y Precios Competitivos",
-    caption: "Relaciones duraderas con nuestros clientes, respaldadas por productos de calidad",
+    src: mazda2Img,
+    label: "Repuestos Originales y Homologados",
+    caption: "Garantía de fábrica para tu vehículo",
     isLocal: true,
+    imgStyle: { transform: "scale(1.6) translateX(10%) translateY(8%) rotate(10deg)", transformOrigin: "center" },
   },
   {
-    src: ford4Img,
+    src: ford3Img,
     label: "¡Contáctanos, Estamos Listos para Ti!",
     caption: "El placer de atenderte y los repuestos que tu vehículo necesita",
     isLocal: true,
