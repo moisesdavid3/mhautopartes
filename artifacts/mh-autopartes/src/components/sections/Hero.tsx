@@ -106,7 +106,7 @@ export function Hero() {
               alt={slides[current].label}
               className="w-full h-full object-cover"
               style={{
-                filter: "brightness(1.5)",
+                filter: "brightness(1.1)",
                 ...(slides[current].imgStyle ?? (slides[current].flipX ? { transform: "scaleX(-1)" } : {})),
               }}
             />
