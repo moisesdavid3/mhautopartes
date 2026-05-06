@@ -5,7 +5,7 @@ import mhLogo from "@assets/mh_logo.png";
 import { randomWaLink } from "@/lib/whatsapp";
 
 export function Footer() {
-  const pixelColors = ["#F5C518","#F5C518","#E91E8C","#E91E8C","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
+  const pixelColors = ["#F5C518","#F5C518","#CC0000","#CC0000","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
 
   return (
     <>
