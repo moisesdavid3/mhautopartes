@@ -56,7 +56,6 @@ const slides = [
     label: "Calidad y Durabilidad Garantizada",
     caption: "Productos de calidad para mejorar la seguridad al conducir tu vehículo",
     isLocal: true,
-    flipX: true,
   },
   {
     src: mazda2Img,
