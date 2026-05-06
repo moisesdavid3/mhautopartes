@@ -120,31 +120,26 @@ export function Hero() {
         {/* Branding overlay */}
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="container mx-auto px-4 md:px-8">
-            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-14">
+            <div className="flex flex-col items-center md:items-start gap-4">
 
-              {/* Full MH Autopartes logo */}
-              <div className="flex-shrink-0 hidden sm:block">
-                <img
-                  src={mhLogoImg}
-                  alt="MH Autopartes"
-                  className="w-72 md:w-96 object-contain drop-shadow-2xl"
-                />
-              </div>
+              {/* Full MH Autopartes logo — above message */}
+              <img
+                src={mhLogoImg}
+                alt="MH Autopartes"
+                className="w-80 md:w-[28rem] object-contain drop-shadow-2xl"
+              />
 
-              {/* Text content */}
-              <div className="flex-1 text-center md:text-left">
-
-                {/* Slide caption */}
-                <motion.div
-                  key={`caption-${current}`}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 }}
-                  className="mb-6"
-                >
-                  <p className="text-white font-bold text-xl md:text-2xl drop-shadow">{slides[current].label}</p>
-                  <p className="text-white/70 text-sm md:text-base">{slides[current].caption}</p>
-                </motion.div>
+              {/* Slide caption */}
+              <motion.div
+                key={`caption-${current}`}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="mb-6 text-center md:text-left"
+              >
+                <p className="text-white font-bold text-xl md:text-2xl drop-shadow">{slides[current].label}</p>
+                <p className="text-white/70 text-sm md:text-base">{slides[current].caption}</p>
+              </motion.div>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
@@ -172,7 +167,6 @@ export function Hero() {
                     </div>
                   ))}
                 </div>
-              </div>
             </div>
           </div>
         </div>
