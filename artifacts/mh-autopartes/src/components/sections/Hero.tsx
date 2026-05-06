@@ -43,7 +43,7 @@ const slides = [
   {
     src: chevOnixImg,
     label: "Dos Sedes en Medellín a tu Servicio",
-    caption: "Encuéntranos en el Palace y Chagualo",
+    caption: "Encuéntranos en Palace y Chagualo",
     isLocal: true,
   },
   {
