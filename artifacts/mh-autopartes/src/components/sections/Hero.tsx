@@ -41,7 +41,7 @@ const slides = [
   {
     src: chevOnixImg,
     label: "Dos Sedes en Medellín a tu Servicio",
-    caption: "Encuéntranos en el Palace y Chagualo — inventario completo y entrega inmediata en mostrador",
+    caption: "Encuéntranos en el Palace y Chagualo",
     isLocal: true,
   },
   {
