@@ -11,7 +11,7 @@ import mazdacx30Img from "@assets/marcas/mazdacx30.jpg";
 import kia_picantoImg from "@assets/marcas/kia_picanto.jpg";
 import hyundaiImg from "@assets/marcas/hyundai.jpg";
 import chevOnixImg from "@assets/marcas/chev_onix.jpg";
-import renaultDusterImg from "@assets/marcas/renault_duster.jpg";
+import renaultCapturImg from "@assets/marcas/renault_captur.jpg";
 import ford3Img from "@assets/marcas/ford3.jpg";
 
 const brandIcons = [
@@ -33,10 +33,11 @@ const slides = [
     isLocal: true,
   },
   {
-    src: renaultDusterImg,
+    src: renaultCapturImg,
     label: "Servicio, Calidad y Precios Competitivos",
     caption: "Relaciones duraderas con nuestros clientes, respaldadas por productos de calidad",
     isLocal: true,
+    flipX: true,
   },
   {
     src: chevOnixImg,
