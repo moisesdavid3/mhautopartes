@@ -241,8 +241,6 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Red line below slider */}
-      <div className="w-full h-1.5 bg-[#CC0000]" />
     </section>
   );
 }
