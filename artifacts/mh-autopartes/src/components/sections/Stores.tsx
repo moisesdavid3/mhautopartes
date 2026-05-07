@@ -17,8 +17,6 @@ const stores = [
     lineaUnica: "(604) 444 56 65",
     mapsLink: "https://maps.app.goo.gl/PDTbERvQ6eU1nrR38",
     photo: palaceImg,
-    objectPosition: "center 35%",
-    imgTranslate: "translateX(10%) translateY(10%) scale(1.20)",
   },
   {
     name: "Sede Chagualo",
