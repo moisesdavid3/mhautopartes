@@ -115,16 +115,10 @@ export function Hero() {
               <video
                 src={(slides[current] as any).video}
                 className="w-full h-full object-cover"
-                style={{ objectPosition: "top" }}
                 autoPlay
                 muted
+                loop
                 playsInline
-                onTimeUpdate={(e) => {
-                  if (e.currentTarget.currentTime >= 10) {
-                    e.currentTarget.pause();
-                    next();
-                  }
-                }}
               />
             ) : (
               <img
