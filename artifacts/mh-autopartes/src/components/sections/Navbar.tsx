@@ -7,9 +7,9 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "REPUESTOS", href: "#catalogo" },
+    { name: "CATÁLOGO", href: "#catalogo" },
     { name: "NOSOTROS", href: "#nosotros" },
-    { name: "CONTACTO", href: "#tiendas" },
+    { name: "PUNTOS DE VENTA", href: "#puntos-de-venta" },
   ];
 
   return (

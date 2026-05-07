@@ -53,9 +53,9 @@ export function Footer() {
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Enlaces</h4>
               <ul className="space-y-2">
-                <li><a href="#catalogo" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Repuestos</a></li>
+                <li><a href="#catalogo" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Catálogo</a></li>
                 <li><a href="#nosotros" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Nosotros</a></li>
-                <li><a href="#tiendas"  className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Contacto</a></li>
+                <li><a href="#puntos-de-venta" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Puntos de Venta</a></li>
               </ul>
             </div>
 

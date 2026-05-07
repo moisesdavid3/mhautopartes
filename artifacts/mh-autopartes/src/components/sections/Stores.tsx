@@ -36,7 +36,7 @@ const stores = [
 
 export function Stores() {
   return (
-    <section id="tiendas" className="py-20 bg-[#D6E4F7] relative overflow-hidden">
+    <section id="puntos-de-venta" className="py-20 bg-[#D6E4F7] relative overflow-hidden">
 
       {/* Falling bars — right margin only (outside the Chagualo card edge) */}
       <div className="absolute top-0 right-0 h-full pointer-events-none overflow-hidden z-0" style={{ width: "clamp(1rem, calc(50vw - 576px + 1.5rem), 12vw)" }}>
@@ -67,7 +67,7 @@ export function Stores() {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">Nuestras Sedes</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">Nuestros Puntos de Venta</h2>
           <p className="text-gray-500">
             Visítanos en Medellín. Inventario completo y entrega inmediata en mostrador.
           </p>
