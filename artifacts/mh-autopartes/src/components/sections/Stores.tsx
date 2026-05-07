@@ -18,6 +18,7 @@ const stores = [
     mapsLink: "https://maps.app.goo.gl/PDTbERvQ6eU1nrR38",
     photo: palaceImg,
     objectPosition: "center 35%",
+    imgTranslate: "translateX(10%) translateY(10%) scale(1.20)",
   },
   {
     name: "Sede Chagualo",
@@ -86,12 +87,17 @@ export function Stores() {
             >
               {/* Store photo */}
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={store.photo}
-                  alt={store.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  style={{ objectPosition: (store as any).objectPosition ?? "center center" }}
-                />
+                <div
+                  className="w-full h-full"
+                  style={{ transform: (store as any).imgTranslate ?? "none" }}
+                >
+                  <img
+                    src={store.photo}
+                    alt={store.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    style={{ objectPosition: (store as any).objectPosition ?? "center center" }}
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5">
                   <h3 className="text-2xl font-black text-white drop-shadow">{store.name}</h3>
