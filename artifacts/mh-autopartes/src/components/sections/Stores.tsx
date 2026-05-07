@@ -69,7 +69,7 @@ export function Stores() {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">Nuestros Puntos de Venta</h2>
           <p className="text-gray-500">
-            Visítanos en Medellín. Inventario completo y entrega inmediata en mostrador.
+            Ubicados estratégicamente para ofrecerte cobertura total y rapidez en la entrega.
           </p>
         </div>
 

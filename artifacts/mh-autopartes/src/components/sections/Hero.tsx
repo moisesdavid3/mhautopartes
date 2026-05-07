@@ -11,6 +11,7 @@ import mazdacx30Img from "@assets/marcas/mazdacx30.jpg";
 import kia_picantoImg from "@assets/marcas/kia_picanto.jpg";
 import hyundaiImg from "@assets/marcas/hyundai.jpg";
 import chevOnixImg from "@assets/marcas/chev_onix.jpg";
+import chevTrailImg from "@assets/marcas/chev_trail.jpg";
 import renaultCapturImg from "@assets/marcas/renault_captur.jpg";
 import ford3Img from "@assets/marcas/ford3.jpg";
 import palaceVideo from "@assets/video_palace.mp4";
@@ -48,7 +49,7 @@ const slides = [
     flipX: true,
   },
   {
-    src: chevOnixImg,
+    src: chevTrailImg,
     label: "Dos Sedes en Medellín a tu Servicio",
     caption: "Encuéntranos en Palace y Chagualo",
     isLocal: true,
