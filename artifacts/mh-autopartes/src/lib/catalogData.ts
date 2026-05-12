@@ -49,22 +49,29 @@ import distCorreas from "@assets/categorias/correadist.png";
 import distImpulsadores from "@assets/categorias/impulsadoresdistrib.png";
 import distPinon from "@assets/categorias/pinonciguenal.png";
 
-import catCasquetes from "@assets/catalog/casquetes.jpg";
-import catValvulas from "@assets/catalog/valvulas.jpg";
-import catSensorTemp from "@assets/catalog/sensor_temp.jpg";
-import catBateria from "@assets/catalog/bateria.jpg";
-import catIluminacion from "@assets/catalog/iluminacion.jpg";
-import catInyectores from "@assets/catalog/inyectores.jpg";
-import catReguladores from "@assets/catalog/reguladores.jpg";
-import catSensores from "@assets/catalog/sensores.jpg";
-import catRotula from "@assets/catalog/rotula.jpg";
-import catCablesAlta from "@assets/catalog/cables_alta.jpg";
-import catCarburador from "@assets/catalog/carburador.jpg";
-import catTensores from "@assets/catalog/tensores.jpg";
-import catChupas from "@assets/catalog/chupas.jpg";
-import catCilindros from "@assets/catalog/cilindros_freno.jpg";
-import catAntiruidos from "@assets/catalog/antiruidos.jpg";
-import catSwitches from "@assets/catalog/switches.jpg";
+import catCasquetes from "@assets/categorias/motor_casquetes.png";
+import catValvulas from "@assets/categorias/motor_valvulas.png";
+import catSensorTemp from "@assets/categorias/sensor_oxigeno.png";
+import catBateria from "@assets/categorias/bateria1.png";
+import catIluminacion from "@assets/categorias/iluminacion.png";
+import catInyectores from "@assets/categorias/inyectores.png";
+import catReguladores from "@assets/categorias/reguladores.png";
+import catSensores from "@assets/categorias/pera_motovent.png";
+import catRotula from "@assets/categorias/rotula.png";
+import catCablesAlta from "@assets/categorias/cables_alta.png";
+import catCarburador from "@assets/categorias/carburador.png";
+import catTensores from "@assets/categorias/tensor_dist.png";
+import catChupas from "@assets/categorias/chupas.png";
+import catCilindros from "@assets/categorias/cilindro_freno.png";
+import catAntiruidos from "@assets/categorias/antiruido.png";
+import catAfinAceite from "@assets/categorias/afin_aceite.png";
+import catSwitchEncendido from "@assets/categorias/switch_encendido.png";
+import catSwitchParqueo from "@assets/categorias/switch_parqueo.png";
+import catSwitchLuces from "@assets/categorias/swtich_luces.png";
+
+import aceites_lub1 from "@assets/categorias/aceites_lub1.png";
+import aceites_lub2 from "@assets/categorias/aceites_lub2.png";
+import aceites_lub3 from "@assets/categorias/aceites_lub3.png";
 
 import frenosBandas from "@assets/categorias/bandasfreno.png";
 import frenosBomba from "@assets/categorias/bombafreno.png";
@@ -159,19 +166,21 @@ export const catalogCategories: Category[] = [
       { name: "Inyectores", image: catInyectores },
       { name: "Motor de arranque", image: electMotorArranque },
       { name: "Reguladores", image: catReguladores },
-      { name: "Switches de encendido", image: catSwitches },
+      { name: "Switches de encendido", image: catSwitchEncendido },
       { name: "Sensores", image: catSensores },
-      { name: "Switches de parqueo", image: catSwitches },
-      { name: "Switches de luces", image: catSwitches },
+      { name: "Switches de parqueo", image: catSwitchParqueo },
+      { name: "Switches de luces", image: catSwitchLuces },
     ],
   },
   {
     id: "aceites",
     name: "Aceites y Lubricantes",
     icon: "",
-    coverImage: aceite,
+    coverImage: aceites_lub1,
     subcategories: [
-      { name: "Aceites y Lubricantes", image: aceite },
+      { name: "Aceites", image: aceites_lub1 },
+      { name: "Lubricantes", image: aceites_lub2 },
+      { name: "Refrigerantes", image: aceites_lub3 },
     ],
   },
   {
@@ -194,7 +203,7 @@ export const catalogCategories: Category[] = [
     icon: "",
     coverImage: afinFiltroAire,
     subcategories: [
-      { name: "Aceite", image: aceite },
+      { name: "Aceite", image: catAfinAceite },
       { name: "Cables de alta", image: catCablesAlta },
       { name: "Filtro de aire", image: afinFiltroAire },
       { name: "Filtro de gasolina", image: afinFiltroGasolina },
