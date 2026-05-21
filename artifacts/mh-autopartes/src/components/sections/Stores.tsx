@@ -10,9 +10,9 @@ const stores = [
     address: "Carrera 50 #40-64, Medellín",
     hours: "Lunes–Viernes 8am–6pm · Sábado 8am–2pm",
     phones: [
-      { number: "324 593 45 59", wa: "573245934559" },
-      { number: "324 593 45 57", wa: "573245934557" },
-      { number: "302 402 78 58", wa: "573024027858" },
+      { number: "314 893 62 36", wa: "573148936236" },
+      { number: "320 681 09 78", wa: "573206810978" },
+      { number: "324 593 45 55", wa: "573245934555" },
     ],
     lineaUnica: "(604) 444 56 65",
     mapsLink: "https://maps.app.goo.gl/PDTbERvQ6eU1nrR38",
@@ -21,11 +21,11 @@ const stores = [
   {
     name: "Sede Chagualo",
     address: "Calle 65 #52-34, Medellín",
-    hours: "Lunes–Domingo 7am–9pm",
+    hours: "Lunes–Sábado 7am–8pm · Domingo 7am–3pm",
     phones: [
-      { number: "314 893 62 36", wa: "573148936236" },
-      { number: "320 681 09 78", wa: "573206810978" },
-      { number: "324 593 45 55", wa: "573245934555" },
+      { number: "324 593 45 59", wa: "573245934559" },
+      { number: "324 593 45 57", wa: "573245934557" },
+      { number: "302 402 78 58", wa: "573024027858" },
       { number: "301 170 86 36", wa: "573011708636" },
     ],
     lineaUnica: "(604) 444 56 65",
