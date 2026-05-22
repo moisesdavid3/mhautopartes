@@ -5,6 +5,7 @@
       "name": "mh-autopartes",
       "runtimeExecutable": "pnpm",
       "runtimeArgs": ["--filter", "mh-autopartes", "dev"],
+      "cwd": "/Users/moisesmedina/Claude Projects/MH Auto/MH-Autopartes-repo",
       "env": {
         "PORT": "5173",
         "BASE_PATH": "/"
