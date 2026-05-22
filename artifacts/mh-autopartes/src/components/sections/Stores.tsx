@@ -1,7 +1,7 @@
 import { MapPin, Clock, Phone, MessageCircle, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
 import palaceImg from "@assets/palace_nueva.jpg";
-import chagualoImg from "@assets/chagualo_nueva.jpg";
+import chagualoImg from "@assets/chagualo2.jpg";
 import { randomWaLink } from "@/lib/whatsapp";
 
 const stores = [
