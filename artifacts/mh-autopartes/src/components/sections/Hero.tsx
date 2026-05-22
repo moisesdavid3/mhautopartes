@@ -163,7 +163,7 @@ export function Hero() {
               </motion.div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <a
                     href="#catalogo"
                     className="inline-flex items-center gap-2 bg-[#215BE1] hover:bg-[#1a4bc0] text-white font-bold px-7 py-3 rounded-lg transition-colors shadow-lg text-sm uppercase tracking-wide"
@@ -180,8 +180,15 @@ export function Hero() {
                   </a>
                 </div>
 
+                {/* Línea única */}
+                <div className="flex items-center justify-center gap-2 text-white/90">
+                  <span className="text-white/60 text-base">☎</span>
+                  <span className="text-white/60 text-base uppercase tracking-widest font-semibold">Línea Única:</span>
+                  <span className="text-white font-bold text-2xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                </div>
+
                 {/* Brand logos */}
-                <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">
+                <div className="flex flex-wrap gap-5 items-center justify-center md:justify-start mb-2">
                   {brandIcons.map(({ name, icon: Icon }) => (
                     <div key={name} className="flex items-center justify-center group cursor-pointer">
                       <Icon size={32} color="white" className="opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all drop-shadow" />

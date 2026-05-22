@@ -8,7 +8,7 @@ const stores = [
   {
     name: "Sede Palace",
     address: "Carrera 50 #40-64, Medellín",
-    hours: "Lunes–Viernes 8am–6pm · Sábado 8am–2pm",
+    hours: "Lunes–Viernes 8am–6pm · Sábado 8am–3pm",
     phones: [
       { number: "314 893 62 36", wa: "573148936236" },
       { number: "320 681 09 78", wa: "573206810978" },
