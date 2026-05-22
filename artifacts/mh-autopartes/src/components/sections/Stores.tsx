@@ -31,6 +31,7 @@ const stores = [
     lineaUnica: "(604) 444 56 65",
     mapsLink: "https://maps.app.goo.gl/5kp2AwsNyhGsMRaR7",
     photo: chagualoImg,
+    objectPosition: "center 70%",
   },
 ];
 

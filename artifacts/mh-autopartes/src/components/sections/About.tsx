@@ -3,10 +3,10 @@ import chevroletBg from "@assets/marcas/chevrolet.jpg";
 
 export function About() {
   const timeline = [
-    { year: "2000", title: "Fundación Metromazda", desc: "Iniciamos operaciones en el centro de Medellín, especializados exclusivamente en partes originales Mazda." },
-    { year: "2010", title: "Expansión de Marcas", desc: "Ampliamos nuestro catálogo a 6 marcas principales para cubrir las necesidades de los talleres locales." },
-    { year: "2018", title: "Rebranding a MH Autopartes", desc: "Nueva identidad visual y estructura organizativa para soportar nuestro crecimiento en la ciudad." },
-    { year: "2024", title: "Transformación Digital", desc: "Lanzamiento de nuevas plataformas de atención para agilizar pedidos y consultas vía WhatsApp." }
+    { year: "2000", title: "Fundación", desc: "Iniciamos operaciones en el centro de Medellín con la razón social Metromazda, especializados en partes originales Mazda y otras marcas." },
+    { year: "2009", title: "Expansión de Marcas", desc: "Estabilizamos nuestro catálogo a 6 marcas principales para cubrir las necesidades de los talleres locales en productos originales y homologados.\nChevrolet, Renault, Mazda, Kia, Hyundai, Ford" },
+    { year: "2018", title: "Rebranding a MH Autopartes", desc: "Nueva identidad visual y estructura organizativa para soportar nuestro crecimiento en la ciudad, garantizando un inventario multimarca." },
+    { year: "2024", title: "Especialización del servicio", desc: "Lanzamiento de nuevas plataformas de atención para agilizar pedidos y consultas, un equipo de trabajo enfocado en generar el mejor servicio al cliente." }
   ];
 
   return (
@@ -62,7 +62,7 @@ export function About() {
                   <div className="bg-white/90 border border-gray-200 p-6 rounded-xl hover:border-[#215BE1]/30 transition-colors shadow-sm">
                     <span className="text-[#215BE1] font-black text-xl block mb-1">{item.year}</span>
                     <h4 className="text-gray-900 font-bold text-lg mb-2">{item.title}</h4>
-                    <p className="text-gray-600">{item.desc}</p>
+                    <p className="text-gray-600 whitespace-pre-line">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
