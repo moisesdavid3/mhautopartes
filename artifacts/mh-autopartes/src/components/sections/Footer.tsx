@@ -58,7 +58,7 @@ export function Footer() {
                 <li><NavHashLink href="/#nosotros" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Nosotros</NavHashLink></li>
                 <li><NavHashLink href="/#puntos-de-venta" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Puntos de Venta</NavHashLink></li>
                 <li><Link href="/politica-de-datos" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Política de Tratamiento de Datos</Link></li>
-                <li><Link href="/politica-devoluciones-garantias" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Devoluciones y Garantías</Link></li>
+                <li><Link href="/politica-devoluciones-garantias" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Política Devoluciones y Garantías</Link></li>
               </ul>
             </div>
 
