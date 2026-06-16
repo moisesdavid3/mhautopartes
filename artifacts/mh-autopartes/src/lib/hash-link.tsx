@@ -1,5 +1,4 @@
 import { useLocation, Link } from "wouter";
-import type { LinkProps } from "wouter";
 import { useCallback } from "react";
 
 function scrollToSection(id: string) {
@@ -9,7 +8,13 @@ function scrollToSection(id: string) {
   }
 }
 
-export function HashLink({ href, children, className, ...props }: LinkProps) {
+interface Props {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function HashLink({ href, children, className }: Props) {
   const [location] = useLocation();
 
   const handleClick = useCallback(
@@ -24,13 +29,13 @@ export function HashLink({ href, children, className, ...props }: LinkProps) {
   );
 
   return (
-    <Link href={href} className={className} onClick={handleClick} {...props}>
+    <Link href={href} className={className} onClick={handleClick}>
       {children}
     </Link>
   );
 }
 
-export function NavHashLink({ href, children, className, onClick: externalOnClick, ...props }: LinkProps & { onClick?: () => void }) {
+export function NavHashLink({ href, children, className, onClick: externalOnClick }: Props & { onClick?: () => void }) {
   const [, navigate] = useLocation();
 
   const handleClick = useCallback(
@@ -51,7 +56,7 @@ export function NavHashLink({ href, children, className, onClick: externalOnClic
   );
 
   return (
-    <a href={href} className={className} onClick={handleClick} {...props}>
+    <a href={href} className={className} onClick={handleClick}>
       {children}
     </a>
   );
