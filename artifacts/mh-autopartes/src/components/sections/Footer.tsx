@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { SiInstagram, SiFacebook } from "react-icons/si";
 import mhLogo from "@assets/mh_logo.png";
 import { randomWaLink } from "@/lib/whatsapp";
+import { NavHashLink } from "@/lib/hash-link";
 
 export function Footer() {
   const pixelColors = ["#F5C518","#F5C518","#CC0000","#CC0000","#FFFFFF","#FFFFFF","#215BE1","#215BE1"];
@@ -53,9 +54,11 @@ export function Footer() {
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Enlaces</h4>
               <ul className="space-y-2">
-                <li><a href="#catalogo" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Catálogo</a></li>
-                <li><a href="#nosotros" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Nosotros</a></li>
-                <li><a href="#puntos-de-venta" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Puntos de Venta</a></li>
+                <li><NavHashLink href="/#catalogo" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Catálogo</NavHashLink></li>
+                <li><NavHashLink href="/#nosotros" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Nosotros</NavHashLink></li>
+                <li><NavHashLink href="/#puntos-de-venta" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Puntos de Venta</NavHashLink></li>
+                <li><Link href="/politica-de-datos" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Política de Datos</Link></li>
+                <li><Link href="/politica-devoluciones-garantias" className="text-white/70 hover:text-[#215BE1] transition-colors text-sm">Devoluciones y Garantías</Link></li>
               </ul>
             </div>
 

@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 import mhLogo from "@assets/mh_logo.png";
+import { NavHashLink } from "@/lib/hash-link";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "CATÁLOGO", href: "#catalogo" },
-    { name: "NOSOTROS", href: "#nosotros" },
-    { name: "PUNTOS DE VENTA", href: "#puntos-de-venta" },
+    { name: "CATÁLOGO", href: "/#catalogo" },
+    { name: "NOSOTROS", href: "/#nosotros" },
+    { name: "PUNTOS DE VENTA", href: "/#puntos-de-venta" },
   ];
 
   return (
@@ -17,24 +19,24 @@ export function Navbar() {
       {/* Main navbar */}
       <div className="bg-[#0B1526]">
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-16">
-          <a href="#" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img
               src={mhLogo}
               alt="MH Autopartes"
               className="h-12 w-auto object-contain"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center">
             {navLinks.map((link) => (
-              <a
+              <NavHashLink
                 key={link.name}
                 href={link.href}
                 className="text-sm font-semibold text-white/90 hover:text-white hover:bg-[#215BE1] px-5 py-5 transition-colors"
               >
                 {link.name}
-              </a>
+              </NavHashLink>
             ))}
           </nav>
 
@@ -53,14 +55,14 @@ export function Navbar() {
               className="bg-[#0B1526] border-t border-white/10 flex flex-col md:hidden overflow-hidden"
             >
               {navLinks.map((link) => (
-                <a
+                <NavHashLink
                   key={link.name}
                   href={link.href}
                   className="text-white/90 hover:text-white hover:bg-[#215BE1] px-6 py-4 text-sm font-semibold transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </NavHashLink>
               ))}
             </motion.div>
           )}
