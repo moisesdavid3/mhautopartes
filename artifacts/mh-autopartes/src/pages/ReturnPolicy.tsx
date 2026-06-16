@@ -19,21 +19,6 @@ export default function ReturnPolicy() {
 
           <div className="bg-white border border-gray-200 rounded-xl p-8 md:p-12 shadow-sm">
             <div className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-600 prose-p:leading-relaxed prose-ul:text-gray-600 prose-li:marker:text-[#215BE1] prose-strong:text-gray-900">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 bg-gray-50 rounded-lg mb-8 text-sm">
-                <div>
-                  <p className="font-bold text-gray-900">Código:</p>
-                  <p>GC-PD-01</p>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Versión:</p>
-                  <p>01</p>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Fecha:</p>
-                  <p>05/01/2023</p>
-                </div>
-              </div>
-
               <h2>Objetivo</h2>
               <p>
                 Comunicar a nuestros clientes las políticas y procesos de devoluciones y garantías, entregando la información necesaria y las soluciones respectivas, con el fin de respetar sus derechos como consumidores y mantener nuestras relaciones con los clientes durante el tiempo.
