@@ -1,8 +1,7 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Link } from "wouter";
 import { SiInstagram, SiFacebook } from "react-icons/si";
 import mhLogo from "@assets/mh_logo.png";
-import { randomWaLink } from "@/lib/whatsapp";
 import { NavHashLink } from "@/lib/hash-link";
 
 export function Footer() {
@@ -98,17 +97,7 @@ export function Footer() {
                   <span className="block text-white font-semibold mb-0.5">Sede Chagualo</span>
                   Calle 65 #52-34, Medellín
                 </li>
-                <li className="mt-3">
-                  <a
-                    href={randomWaLink("Hola MH Autopartes, quisiera hacer una consulta")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-4 py-2 rounded-lg transition-colors"
-                  >
-                    <MessageCircle size={15} />
-                    Escríbenos por WhatsApp
-                  </a>
-                </li>
+
               </ul>
             </div>
 
