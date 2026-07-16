@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, MessageCircle, PhoneCall } from "lucide-react";
+import { MapPin, Clock, Phone, MessageCircle, PhoneCall, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 import palaceImg from "@assets/palace_nueva.jpg";
 import chagualoImg from "@assets/chagualo2.jpg";
@@ -9,6 +9,7 @@ const stores = [
     name: "Sede Centro (Palace)",
     address: "Carrera 50 #40-64, Medellín",
     hours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
+    deliveryHours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
     phones: [
       { number: "314 893 62 36", wa: "573148936236" },
       { number: "320 681 09 78", wa: "573206810978" },
@@ -22,6 +23,7 @@ const stores = [
     name: "Sede Norte (Chagualo)",
     address: "Calle 65 #52-34, Medellín",
     hours: ["Lunes - Sábado 8am-8pm", { text: "Domingos y Festivos 8am-3pm", bold: true }],
+    deliveryHours: ["Lunes - Viernes 8am-6pm", { text: "Sábados, Domingos y Festivos 8am-3pm", bold: true }],
     phones: [
       { number: "324 593 45 59", wa: "573245934559" },
       { number: "324 593 45 57", wa: "573245934557" },
@@ -114,6 +116,17 @@ export function Stores() {
                     <Clock size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
                     <span className="text-base flex flex-col gap-0.5">
                       {(Array.isArray(store.hours) ? store.hours : [store.hours]).map((line, i) => (
+                        typeof line === "object" && (line as any).bold
+                          ? <span key={i} className="font-bold text-gray-800">{(line as any).text}</span>
+                          : <span key={i}>{line as string}</span>
+                      ))}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Truck size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
+                    <span className="text-base flex flex-col gap-0.5">
+                      <span className="text-gray-500 text-xs font-semibold uppercase tracking-wider">Domicilios</span>
+                      {(Array.isArray(store.deliveryHours) ? store.deliveryHours : [store.deliveryHours]).map((line, i) => (
                         typeof line === "object" && (line as any).bold
                           ? <span key={i} className="font-bold text-gray-800">{(line as any).text}</span>
                           : <span key={i}>{line as string}</span>
