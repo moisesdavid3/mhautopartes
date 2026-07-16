@@ -8,7 +8,7 @@ const stores = [
   {
     name: "Sede Centro (Palace)",
     address: "Carrera 50 #40-64, Medellín",
-    hours: ["Lunes–Viernes 8am–6pm · Sábado 8am–3pm"],
+    hours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
     phones: [
       { number: "314 893 62 36", wa: "573148936236" },
       { number: "320 681 09 78", wa: "573206810978" },
@@ -21,7 +21,7 @@ const stores = [
   {
     name: "Sede Norte (Chagualo)",
     address: "Calle 65 #52-34, Medellín",
-    hours: ["Lunes–Sábado 7am–8pm", { text: "Domingos y Festivos 7am–3pm", bold: true }],
+    hours: ["Lunes - Sábado 8am-8pm", { text: "Domingos y Festivos 8am-3pm", bold: true }],
     phones: [
       { number: "324 593 45 59", wa: "573245934559" },
       { number: "324 593 45 57", wa: "573245934557" },
