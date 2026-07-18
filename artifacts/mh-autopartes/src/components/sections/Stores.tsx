@@ -130,17 +130,17 @@ export function Stores() {
                   </div>
                   <div className="bg-[#215BE1]/5 border border-[#215BE1]/20 rounded-xl p-4 space-y-3">
                     <div className="flex items-center gap-3">
-                      <PhoneCall size={20} className="text-[#215BE1] flex-shrink-0" />
+                      <PhoneCall size={22} className="text-[#215BE1] flex-shrink-0" />
                       <a
                         href="tel:6044445665"
-                        className="font-bold text-gray-900 hover:text-[#215BE1] transition-colors"
+                        className="font-extrabold text-gray-900 hover:text-[#215BE1] transition-colors text-xl"
                       >
                         Línea Única: {store.lineaUnica}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
                       <MessageCircle size={22} className="text-[#25D366] flex-shrink-0" />
-                      <span className="font-bold text-gray-700">WhatsApp</span>
+                      <span className="font-extrabold text-gray-700 text-xl">WhatsApp</span>
                       {store.phones.map((p) => (
                         <a
                           key={p.wa}
