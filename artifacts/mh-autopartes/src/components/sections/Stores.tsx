@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, MessageCircle, PhoneCall, Truck } from "lucide-react";
+import { MapPin, Clock, MessageCircle, PhoneCall, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 import palaceImg from "@assets/palace_nueva.jpg";
 import chagualoImg from "@assets/chagualo2.jpg";
@@ -128,34 +128,30 @@ export function Stores() {
                       ))}
                     </span>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <PhoneCall size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
-                    <a
-                      href="tel:6044445665"
-                      className="font-bold text-gray-900 text-base hover:text-[#215BE1] transition-colors"
-                    >
-                      Línea Única: {store.lineaUnica}
-                    </a>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Phone size={20} className="text-[#215BE1] mt-0.5 flex-shrink-0" />
-                    <div className="flex flex-col gap-2 w-full">
-                      <span className="font-semibold text-gray-700 text-sm">WhatsApp</span>
-                      <ul className="space-y-1.5">
-                        {store.phones.map((p) => (
-                          <li key={p.wa}>
-                            <a
-                              href={randomWaLink(`Hola MH Autopartes, quisiera hacer una consulta`)}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 text-[#25D366] hover:text-white bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/30 hover:border-[#25D366] font-semibold text-sm px-3 py-1.5 rounded-lg transition-all w-full"
-                            >
-                              <MessageCircle size={14} />
-                              {p.number}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+                  <div className="bg-[#215BE1]/5 border border-[#215BE1]/20 rounded-xl p-4 space-y-3">
+                    <div className="flex items-center gap-3">
+                      <PhoneCall size={20} className="text-[#215BE1] flex-shrink-0" />
+                      <a
+                        href="tel:6044445665"
+                        className="font-bold text-gray-900 hover:text-[#215BE1] transition-colors"
+                      >
+                        Línea Única: {store.lineaUnica}
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <MessageCircle size={22} className="text-[#25D366] flex-shrink-0" />
+                      <span className="font-bold text-gray-700">WhatsApp</span>
+                      {store.phones.map((p) => (
+                        <a
+                          key={p.wa}
+                          href={randomWaLink(`Hola MH Autopartes, quisiera hacer una consulta`)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#25D366] hover:text-[#1da851] font-extrabold text-xl transition-colors"
+                        >
+                          {p.number}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
