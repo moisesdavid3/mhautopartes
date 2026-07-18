@@ -179,11 +179,25 @@ export function Hero() {
                   </a>
                 </div>
 
-                {/* Línea única */}
-                <div className="flex items-center justify-center gap-2 text-white/90">
-                  <span className="text-white/60 text-base">☎</span>
-                  <span className="text-white/60 text-base uppercase tracking-widest font-semibold">Línea Única:</span>
-                  <span className="text-white font-bold text-2xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                {/* Línea única + WhatsApp */}
+                <div className="flex flex-col items-center gap-1">
+                  <div className="flex items-center justify-center gap-2 text-white/90">
+                    <span className="text-white/60 text-base">☎</span>
+                    <span className="text-white/60 text-base uppercase tracking-widest font-semibold">Línea Única:</span>
+                    <span className="text-white font-bold text-2xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 text-white/90">
+                    <span className="text-[#25D366] text-base font-bold">💬</span>
+                    <span className="text-white/60 text-base uppercase tracking-widest font-semibold">WhatsApp:</span>
+                    <a
+                      href={randomWaLink("Hola MH Autopartes, quisiera hacer una consulta")}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white font-bold text-2xl tracking-wide drop-shadow hover:text-[#25D366] transition-colors"
+                    >
+                      324 593 45 55
+                    </a>
+                  </div>
                 </div>
 
                 {/* Brand logos */}
