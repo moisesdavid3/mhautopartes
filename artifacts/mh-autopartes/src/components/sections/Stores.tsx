@@ -133,21 +133,21 @@ export function Stores() {
                       <PhoneCall size={22} className="text-[#215BE1] flex-shrink-0" />
                       <a
                         href="tel:6044445665"
-                        className="font-extrabold text-gray-900 hover:text-[#215BE1] transition-colors text-xl"
+                        className="text-gray-900 hover:text-[#215BE1] transition-colors text-xl"
                       >
                         Línea Única: {store.lineaUnica}
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
                       <MessageCircle size={22} className="text-[#25D366] flex-shrink-0" />
-                      <span className="font-extrabold text-gray-700 text-xl">WhatsApp</span>
+                      <span className="text-gray-700 text-xl">WhatsApp</span>
                       {store.phones.map((p) => (
                         <a
                           key={p.wa}
                           href={randomWaLink(`Hola MH Autopartes, quisiera hacer una consulta`)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#25D366] hover:text-[#1da851] font-extrabold text-xl transition-colors"
+                          className="text-[#25D366] hover:text-[#1da851] text-xl transition-colors"
                         >
                           {p.number}
                         </a>
