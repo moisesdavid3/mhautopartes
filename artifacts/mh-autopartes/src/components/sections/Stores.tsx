@@ -8,8 +8,8 @@ const stores = [
   {
     name: "Sede Centro (Palace)",
     address: "Carrera 50 #40-64, Medellín",
-    hours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
-    deliveryHours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
+    hours: ["Lunes - Viernes 8am-6pm", { text: "Sábados 8am-2pm", bold: true }],
+    deliveryHours: ["Lunes - Viernes 8am-6pm", { text: "Sábados 8am-2pm", bold: true }],
     phones: [
       { number: "324 593 45 55", wa: "573245934555" },
     ],
