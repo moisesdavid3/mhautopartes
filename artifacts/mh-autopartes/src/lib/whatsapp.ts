@@ -1,11 +1,5 @@
 const WA_NUMBERS = [
-  "573148936236", // Palace 1
-  "573206810978", // Palace 2
-  "573245934555", // Palace 3
-  "573245934559", // Chagualo 1
-  "573245934557", // Chagualo 2
-  "573024027858", // Chagualo 3
-  "573011708636", // Chagualo 4
+  "573245934555",
 ];
 
 export function randomWaLink(text: string) {

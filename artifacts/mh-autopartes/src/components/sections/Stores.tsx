@@ -11,8 +11,6 @@ const stores = [
     hours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
     deliveryHours: ["Lunes - Viernes 8am-6pm / Sábados 8am-2pm"],
     phones: [
-      { number: "314 893 62 36", wa: "573148936236" },
-      { number: "320 681 09 78", wa: "573206810978" },
       { number: "324 593 45 55", wa: "573245934555" },
     ],
     lineaUnica: "(604) 444 56 65",
@@ -25,10 +23,7 @@ const stores = [
     hours: ["Lunes - Sábado 8am-8pm", { text: "Domingos y Festivos 8am-3pm", bold: true }],
     deliveryHours: ["Lunes - Viernes 8am-6pm", { text: "Sábados, Domingos y Festivos 8am-3pm", bold: true }],
     phones: [
-      { number: "324 593 45 59", wa: "573245934559" },
-      { number: "324 593 45 57", wa: "573245934557" },
-      { number: "302 402 78 58", wa: "573024027858" },
-      { number: "301 170 86 36", wa: "573011708636" },
+      { number: "324 593 45 55", wa: "573245934555" },
     ],
     lineaUnica: "(604) 444 56 65",
     mapsLink: "https://maps.app.goo.gl/5kp2AwsNyhGsMRaR7",
