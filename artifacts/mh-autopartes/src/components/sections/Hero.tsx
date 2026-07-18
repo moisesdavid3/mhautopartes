@@ -184,7 +184,7 @@ export function Hero() {
                   <div className="flex items-center justify-center gap-2 text-white/90">
                     <span className="text-white/60 text-base">☎</span>
                     <span className="text-white/60 text-base uppercase tracking-widest font-semibold">Línea Única:</span>
-                    <span className="text-white font-bold text-2xl tracking-wide drop-shadow">(604) 444 56 65</span>
+                    <a href="tel:6044445665" className="text-white font-bold text-2xl tracking-wide drop-shadow hover:text-[#215BE1] transition-colors">(604) 444 56 65</a>
                   </div>
                   <div className="flex items-center justify-center gap-2 text-white/90">
                     <span className="text-[#25D366] text-base font-bold">💬</span>
